@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //数组常用方法
+        var city = new Array('beijing','shanghai','guangzhou');
+        city[3] = "shenyang";
+        //push() 在数组尾部追加元素
+        //pop()  删除数组尾部元素
+        city.push('henan','anhui');
+        var z = city.pop();
+        console.log(city);//["beijing", "shanghai", "guangzhou", "shenyang", "henan"]
+        //unshift()  在数组头部追加元素
+        //shift()    删除数组头部元素
+
+        //indexOf()    在数组的开始位置，判断一个元素第一次出现的下标位置信息
+        //lastIndexOf()在数组的尾部位置，判断一个元素第一次出现的下标位置信息
+        //              以上两个方法通常用于判断数组里边是否出现指定的元素
+        //              有出现一定会返回0/1/2/3等下标信息，否则返回-1假的信息
+        var color = ['red','blue','green','blue','gold','orange','blue','yellow'];
+        console.log(color.indexOf('blue')); //1
+        console.log(color.lastIndexOf('blue')); //6
+        console.log(color.lastIndexOf('pink')); //-1
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

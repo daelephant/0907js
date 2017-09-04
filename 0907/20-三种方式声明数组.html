@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //数组声明
+        //javascript数组元素下标都是"数字的"
+        //          如果下标为非数字的(关联类型的)，则其为对象的"成员属性"
+        //① var arr = [元素，元素，元素。。。]
+        var color = ['green','blue','red'];
+        color[3] = "yellow";
+        console.log(color);//["green", "blue", "red", "yellow"]
+        console.log(color[1]); //blue
+        console.log(color[2]); //red
+
+        //② var arr = new Array(元素，元素，元素。。。);
+        var animal = new Array('dog','cat','pig');
+        console.log(animal);//["dog", "cat", "pig"]
+        console.log(animal[1]); //cat
+
+        //③ var arr = new Array();
+        //   给数组丰富元素： 数组[下标] = 元素值;
+        //   数组访问元素：数组[下标]
+        //   对象访问成员：对象[成员名称] / 对象.成员名称
+        var city = new Array();
+        city[0] = "beijing";//city的数组元素
+        city[1] = "shanghai";
+        city[2] = "guangzhou";
+        city['shandong'] = "jinan";//city的成员属性
+        city['shejiang'] = "hangzhou";
+        console.log(city[1]); //shanghai
+//        console.log(city.1); //报错
+        console.log(city['shandong']);//jinan
+        console.log(city.shandong); //jinan
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

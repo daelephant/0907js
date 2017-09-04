@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function f1(){
+            //以下为给函数声明局部变量,变量数据类型有多种多样
+            var week = "Monday";
+            var weather = "sunshine";
+            var date = 7;
+            var is_finish = false;
+            
+            //以上可以声明多个类型的变量，理所当然 也可以声明“对象变量”
+            function f2(){
+                console.log("this is f2");
+            }
+            return f2; //返回一个函数
+        }
+        var ff = f1();  //本质var ff = f2;  对象对变量进行赋值，是引用传递
+                        //引用传递的结果就是"ff和f2"都可以调用同一个function
+        ff();//this is f2
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

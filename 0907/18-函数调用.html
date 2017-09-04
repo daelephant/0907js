@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //函数调用
+        var f1 = function(){
+            console.log("Today is Monday");
+        }
+        //f1 = "abc"; //同名f1把上边的function给污染(变量覆盖)了
+        f1(); //Today is Monday
+
+        //匿名函数自调用
+        //特点：代码不会发生停顿，立即执行
+        //好处：可以避免变量污染
+        //(function(形参){})(实参);
+        //① 没有参数
+        (function(){ 
+            console.log("Tomorrow is Tuesday");
+        })();//Tomorrow is Tuesday
+
+        //② 有参数
+        (function(week){
+            console.log('Yesterday is '+week);
+        })('Sunday');//Yesterday is Sunday
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

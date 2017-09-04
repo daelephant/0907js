@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //字符串
+        var subject = "good good study day day up";
+        console.log(subject.length);//26
+        console.log(subject.toUpperCase());//GOOD GOOD STUDY DAY DAY UP
+
+        console.log(typeof  subject);//string
+
+        //思考：字符串 为什么可以调用成员
+        //      (传统思维是对象可以调用成员)
+        //      在javascript里边一切都是对象
+        //答：在浏览器解释引擎内部，通过subject字符串创建一个"临时对象"出来
+        //    该临时对象对成员进行调用，并返回调用的结果，之后该临时对象就被销毁
+        //    在程序代码的层次上看就是“字符串调用成员”
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

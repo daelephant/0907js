@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        /*利用callee降低代码的耦合度
+        求n的阶乘：
+        !n = n*!(n-1)
+        !5 = 5*4*3*2*1
+        !4 = 4*3*2*1
+        !3 = 3*2*1
+        !2 = 2*1
+        !1 = 1*/
+        function jiecheng(n){
+            if(n==1){
+                return 1;
+            }
+            //return n * jiecheng(n-1);
+            //callee可以保证外部名称的变化，不会引起内部代码的修改，代码耦合度降低
+            return n * arguments.callee(n-1);
+        }
+        //要把jiecheng名称换成其他的名字进行使用
+        var jc = jiecheng; //对象赋值，其为引用传递
+        jiecheng = null;  //销毁jiecheng函数对象，后期不使用了
+        console.log(jc(4));//24
+
+        var jd = jc;
+        jc = null;
+        console.log(jd(6)); //720
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

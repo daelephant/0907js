@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //eval(参数)语法结构
+        //作用: 使得参数字符串当做"表达式"在上下文环境中运行
+        //eval()参数字符串有要求：必须符合javascript语法规则
+        var a = 13;
+        var b = 12;
+        console.log(a+b);       //[25]
+        console.log("a+b");     //[a+b]  25   1312 
+        console.log("alert(123)"); //字符串[alert(123)] ,没有弹出框
+
+        console.log(eval("a+b")); //[25] 使得"a+b"字符串当做表达式运行起来
+        console.log(eval("alert('abc')"));//[undefined]   有弹出框
+                                            //function alert(){没有return返回信息}
+
+        //console.log(eval("a+f")); //ReferenceError: f is not defined
+        eval("alert(456)");  //有弹出框456信息
+
+        eval("alrt(789)"); //ReferenceError: alrt is not defined
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

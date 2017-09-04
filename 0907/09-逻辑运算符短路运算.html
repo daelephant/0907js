@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //逻辑运算符最终结果
+        var name = "jack";
+        var age = 20;
+        var score = 90;
+        var school = "itcast";
+        var is_money = 0;
+        var is_married = false;
+
+        console.log(name || is_money); //jack  name把is_money给短路，is_money不给执行
+
+        //console.log(name && alert(123)); //undefined  name和alert()都给执行(能看到弹出框)
+
+        console.log(age || alert('abc')); //20   age把alert()给短路(没有弹出框)
+        console.log(is_money && alert(456));//0  is_money把alert()给短路(没有弹出框)
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

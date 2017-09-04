@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //遍历数组
+        var city = new Array('beijing','shanghai','guangzhou');
+        city[3] = "shenyang";
+        city['jilin'] = "changchun";
+        city[20] = "haerbin";
+        
+        //① for循环遍历
+        //   该方式遍历，数组下标最好是0/1/2/3...规则连续的
+        //for(var i=0; i<city.length; i++){
+        //    console.log(i+"--"+city[i]);
+        //}
+
+        //② for-in遍历 (对数组元素下标没有过多要求)
+        //   for(var 下标变量  in  数组){}
+        //   for(var 成员名称  in  对象){}
+        for(var k in city){
+            console.log(k+"==="+city[k]);
+        }
+        for(var k in city){
+            console.log(k+'------'+city[k]);
+        }
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

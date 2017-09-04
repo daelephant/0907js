@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //在函数内部不使用"var"声明的变量就是全局的
+        function f1(){
+            var week = "Monday";
+            weather = "sunshine"; //全局变量
+        }
+        f1();
+        console.log(weather);//sunshine  访问全局变量
+        console.log(week);//ReferenceError: week is not defined
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

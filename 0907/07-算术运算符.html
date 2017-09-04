@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //i++ 和 ++i
+        var age = 20;
+        //i++和 ++i在没有赋值情况下，运行后的结果都是+1操作
+        //age++;
+        //console.log(age);//21
+
+        //++age;
+        //console.log(age);//21
+
+
+        //在赋值的情况下i++和++i有区别：
+        var score = 90;
+        //var new_score = score++;//先赋值、再+1运算
+        //console.log(new_score+"---"+score); //90---91
+
+        var new_score = ++score;//先+1运算、再赋值
+        console.log(new_score+"---"+score); //91---91
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
