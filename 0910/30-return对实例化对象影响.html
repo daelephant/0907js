@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //return对实例化对象的影响：
+        //对创建出来的结果没有影响，任然是一个对象
+        //不过return后续代码不给执行，有成员丢失情况
+        function Animal(){
+            this.age = 5;
+            this.color = "gray";
+            return "xiaohei";
+            this.hobby = "吃骨头";
+            this.act = "散步";
+        }
+        //在函数内部有return关键字使用，那么以下dog到底是对象 、还是返回的信息
+        var dog = new Animal();
+        console.log(dog);//Animal { age=5, color="gray"}
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
