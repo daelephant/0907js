@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //闭包案例-创建数组元素
+        /**
+        创建的数组效果：
+        num[0] = function(){console.log(0)};
+        num[1] = function(){console.log(1)};
+        num[2] = function(){console.log(2)};
+        num[3] = function(){console.log(3)};
+        */
+        var num = new Array();
+        for(var i=0; i<4; i++){
+            num[i] = function(){
+                console.log(i);
+            }
+        }
+        //for循环在i=4的时候就结束
+        console.log("i的值:"+i);
+        //以下各个数组元素访问的结果"与预期不符",原因：
+        //① 系统里边的i变量只有一个
+        //② 以上for循环执行的时候，只是声明了4个函数，但是没有调用
+        //③ 在我们开始像如下进行数组元素函数调用的时候，i变量值已经定格为4
+        num[2]();   //4
+        num[3]();   //4
+        num[0]();   //4
+        num[1]();   //4
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

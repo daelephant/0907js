@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //闭包案例-事件操作
+        window.onload = function(){
+            var lis = document.getElementsByTagName('li');
+            //给每个li设置mouseover和mouseout事件
+            for(var i=0; i<4; i++){
+                //利用闭包，创建多个事件函数，他们都是独立的
+                //并且可以访问到"各自的li元素节点"
+                lis[i].onmouseover = over(i);//闭包
+                lis[i].onmouseout = out(i);//闭包
+            }
+            function over(n){
+                function f2(){
+                    lis[n].style.backgroundColor = "lightgreen";
+                }
+                return f2;
+            }
+            function out(n){
+                function f2(){
+                    lis[n].style.backgroundColor = "";
+                }
+                return f2;
+            }
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+        <ul>
+            <li>student</li>
+            <li>teacher</li>
+            <li>farmer</li>
+            <li>workman</li>
+        </ul>
+    </body>
+</html>

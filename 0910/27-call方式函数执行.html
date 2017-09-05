@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //call方式函数调用
+        //函数名字.call(函数内部this的引用,实参,实参,实参...);
+        //函数名字.apply(函数内部this的引用,[实参,实参,实参...]);
+        
+        function study(addr,time){
+            console.log(this.mingzi+" 在学习跑步,地点是"+addr+",时间是"+time);
+        }
+        
+        var cat = {mingzi:'波斯猫'};
+        //通过增加成员方式使得对象去调用其他函数，方法不可取
+        //其会增加变量污染(覆盖)的风险
+        //cat.xuexi = study;
+        //cat.xuexi = "abc";
+        var pig = {mingzi:'荷兰猪'};
+        //pig.xuexi2 = study;
+        
+        //在不给对象增加成员的情况下，使得对象可以调用其他函数
+        study.call(cat,'中关村','上午');//波斯猫 在学习跑步,地点是中关村,时间是上午
+        study.call(pig,'西三旗','傍晚');//荷兰猪 在学习跑步,地点是西三旗,时间是傍晚
+
+        
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //创建对象
+        //① 字面量方式创建对象
+        //   var obj = {[成员名称:值,成员名称:值。。。]}
+        var pig = {}; //没有默认成员的空对象
+        console.log(pig);//Object {}
+        
+        //有默认成员
+        var cat = {name:'kitty','color':'yellow',climb:function(){console.log('在爬树')}}
+        console.log(cat);//Object { name="kitty", color="yellow", climb=function()}
+
+        //对象访问成员：对象[成员名称]、对象.成员名称
+        console.log(cat.name);  //kitty
+        console.log(cat['color']);//yellow
+        cat.climb();//在爬树
+
+        //给对象丰富(添加)成员：
+        //对象[成员名] = 值
+        //对象.成员名 = 值
+        pig.color = "black";
+        pig['addr'] = "吉林";
+        pig.hobby = function(){console.log('love sleep')};
+        console.log(pig);//Object { color="black", addr="吉林", hobby=function()}
+        pig.hobby();
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

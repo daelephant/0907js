@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //闭包案例-创建数组元素
+        /**
+        创建的数组效果：
+        num[0] = function(){console.log(0)};
+        num[1] = function(){console.log(1)};
+        num[2] = function(){console.log(2)};
+        num[3] = function(){console.log(3)};
+        */
+        var num = new Array();
+        for(var i=0; i<4; i++){
+            //num[i] = 闭包;//闭包被调用了4次，就会生成4个独立的函数
+                            //每个函数内部有自己可以访问的个性化(差异)的信息
+            num[i] = f1(i);
+        }
+        function f1(n){
+            function f2(){
+                console.log(n);
+            }
+            return f2;
+        }
+        num[2]();  //2
+        num[1]();  //1
+        num[0]();  //0
+        num[3]();  //3
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

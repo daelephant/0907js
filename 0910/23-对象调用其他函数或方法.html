@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //对象调用其他函数 或 方法
+        //对象调用其他函数：就是给对象增加一个成员属性，该属性是函数的另一个名字
+        
+        var mingzi = "xiaoming";
+        function study(){
+            this.week = "星期四";
+            //this在函数里边，代表调用该函数的当前对象
+            console.log(this.mingzi+"在学习跑步");//this.mingzi = window.mingzi
+        }
+        window.study();//xiaoming在学习跑步
+        
+        var cat = {mingzi:'小白',eat:'fish'}
+        //使得cat对象调用"study函数"
+        //解决：为cat对象增加一个成员，而该成员就是function study()的另一个名字
+        cat.xuexi = study;//study(函数)对象 对xuexi成员赋值，引用传递
+        cat.xuexi(); //小白 在学习跑步
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

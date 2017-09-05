@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //作用域链
+        var AO = window;
+        var weather = "rain";
+        var week = "Thurday";
+        var date = "0910";
+        console.log("now:"+window.weather);
+        function f1(){
+            console.log("f1:"+AO.weather);
+            function f2(){
+                var weather = "snow";
+                var subject = "php language";
+                console.log("f2:"+AO.weather);
+                function f3(){
+                    var week = "Sunday";
+                    console.log("f3:"+AO.weather+"--星期："+AO.week+'--日期:'+AO.date+'--科目：'+AO.subject);
+                }
+                f3();//f3:rain
+            }
+            f2();//f2:rain
+        }
+        window.f1();//f1:rain
+        /**
+        以上程序代码分析
+        在f3最里边环境获得一个变量信息：
+            首先在本环境获得，如果没有
+            其次像外部环境获得
+            其次再像外部环境获得
+            .....
+            直到找到全局环境为止
+        通过以上分析，变量寻找看似一个“动态过程”，实际其是一个"固态过程"
+        每个环境都有AO活动对象
+        每个环境可以访问的信息早早地已经“固化”为AO的成员信息
+        */
+
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>作用域链</h2>
+    </body>
+</html>

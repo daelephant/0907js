@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //获得对象构造器
+        function Animal(){
+            this.age = 5;
+            this.color = "gray";
+        }
+        var dog = new Animal();
+        console.log(dog.constructor); //Animal() 获得dog的构造器
+
+        function getInfo(){
+            console.log('hello');
+        }
+        //getInfo是函数对象，获得函数对象构造器
+        console.log(getInfo.constructor);//Function()
+
+        //实例化一个函数对象出来
+        //var 函数名字 = new  Function(形参，形参。。。,函数体内容);
+        //function f1(name,age){console.log(name+"--"+age)}
+        var f1 = new Function("name","age","console.log(name+'--'+age)");
+        f1('tom',24);//tom--24
+        
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //无序列表ul/li至少4个项目
+        var person = ['student','teacher','workman','farmer'];
+        var ull = document.createElement('ul');
+        for(var i=0; i<person.length; i++){
+            var lii = document.createElement('li');
+            var txt = document.createTextNode(person[i]);
+
+            //追加
+            lii.appendChild(txt);
+            ull.appendChild(lii);
+
+            //给lii设置mouseover和mouseout事件
+            lii.addEventListener('mouseover',function(){
+                this.style.backgroundColor = "gray";
+            });
+            lii.addEventListener('mouseout',function(){
+                this.style.backgroundColor = "";
+            });
+        }
+        window.onload = function(){
+            document.body.appendChild(ull);
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>创建一个无序列表</h2>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //变量类型及优先关系
+        //优先级：内部变量>>>内部函数>>>形参>>>外部变量(变量/函数/形参)
+
+        //同名的变量和函数同时存在，"变量"会"覆盖"函数
+
+        var yuyan = "php"; //①外部变量
+        function f1(){
+
+            function f2(yuyan){//②形参
+
+                var yuyan = "html"; //④内部变量
+
+                console.log('语言：'+yuyan);
+
+                function yuyan(){//③内部函数
+                    console.log('very good');
+                }
+
+            }
+            f2('java');
+        }
+        f1();
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>变量类型及优先关系</h2>
+    </body>
+</html>

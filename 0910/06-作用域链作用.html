@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //作用域链作用
+        //③ 变量的作用域是“声明时”决定的，非运行时
+        function f1(){
+            var identity = "student";
+            console.log("身份："+identity);
+        }
+
+        function f2(){
+            var identity = "workman";
+            f1(); //workman  【student】  undefined //调用f1函数执行
+                  //f1函数在任何地方调用都是访问到"student"信息
+        }
+        f2();
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>作用域链</h2>
+    </body>
+</html>

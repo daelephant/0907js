@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //作用域链
+        var weather = "rain";
+
+
+        console.log("now:"+weather);
+        function f1(){
+            console.log("f1:"+weather);
+            function f2(){
+                var abc = 123;
+                console.log("f2:"+weather);
+                function f3(){
+                    console.log("f3:"+weather)
+                }
+                f3();//f3:rain
+            }
+            f2();//f2:rain
+        }
+        f1();//f1:rain
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>作用域链</h2>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //作用域链作用
+        //② "内部环境"可以访问"外部环境"的变量，反之不然
+        var week = "Thurday";
+
+        function f1(){
+            var tomorrow = "Friday";
+            //内部环境 访问 外部环境的week变量
+            console.log("Today is "+week);//Today is Thursday
+        }
+        f1();//Today is Thurday
+
+        console.log("明天"+tomorrow);//访问f1内部环境的tomorrow变量
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>作用域链</h2>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //作用域链作用
+        //③ 变量的作用域是“声明时”决定的，非运行时
+        //   访问的变量信息是系统的“唯一”变量，调用的时候取决于该变量的"当时信息"
+        var identity = "student"; //B
+
+        function f1(){  //A
+            console.log('身份：'+identity);
+        }
+        
+        f1();  //【student】  CTO
+
+        identity = "CTO";//C
+        
+        f1();  //student  【CTO】
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>作用域链</h2>
+    </body>
+</html>

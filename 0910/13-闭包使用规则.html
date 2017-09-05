@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //闭包使用规则
+
+        function f1(num){
+            function f2(){
+                console.log('数字:'+num);
+            }
+            return f2;
+        }
+        var fa = f1(100);
+        var fb = f1(110);
+        var fc = f1(120);
+
+
+        fa();   //数字:【100】  110  100
+        fb();   //数字:【110】  110  100
+        fc();   //数字:【120】
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //对象调用其他函数 或 方法
+        
+        var cat = {mingzi:'波斯猫',climb:function(){console.log(this.mingzi+"在爬树");}}
+
+        var tiger = {mingzi:'东北虎',act:function(){console.log('猛虎扑食')}}
+
+        //cat的climb方法执行的时候，内部this指引到tiger对象
+        cat.climb.call(tiger);
+        
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

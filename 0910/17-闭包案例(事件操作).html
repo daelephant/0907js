@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //闭包案例-事件操作
+        window.onload = function(){
+            var lis = document.getElementsByTagName('li');
+            //给每个li设置mouseover和mouseout事件
+            for(var i=0; i<4; i++){
+                //lis[i] 代表每个li的元素节点对象
+                lis[i].onmouseover = function(){
+                    //this代表当前事件节点对象本身
+                    //this.style.backgroundColor = "lightblue";
+                    lis[i].style.backgroundColor = "lightblue";
+                }
+                lis[i].onmouseout = function(){
+                    lis[i].style.backgroundColor = "";
+                }
+            }
+            //for循环执行的时候，内部的事件函数没有执行，其是在声明函数
+            //以上for循环执行完毕i变量的值定格为4
+            //当我们出发事件执行的时候，是在访问"lis[4]"
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+        <ul>
+            <li>student</li>
+            <li>teacher</li>
+            <li>farmer</li>
+            <li>workman</li>
+        </ul>
+    </body>
+</html>
