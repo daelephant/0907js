@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        div{width:700px; height:3000px; background-color:pink;}
+        </style>
+    </head>
+    <body>
+        <h2>事件对象作用</h2>
+        <div>Today is very good</div>
+    </body>
+</html>
+<script type="text/javascript">
+//获得鼠标坐标
+var dv = document.getElementsByTagName('div')[0];
+dv.onclick = function(evt){
+    console.log(evt.clientX+"---"+evt.clientY);//372---287 相对dom区域坐标
+    console.log(evt.pageX+"---"+evt.pageY);//372---2969 相对dom区域坐标，给计算滚动条距离
+    console.log(evt.screenX+"---"+evt.screenY);//850---310 相对屏幕坐标
+}
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>获得文本节点(对象)</h2>
+        <input type="text" id="username" name="mingzi" value="jack" /><br />
+        <input type="text" id="useremail" name="youxiang" value="jack@163.com" /><br />
+    </body>
+</html>
+<script type="text/javascript">
+//首先获得元素节点
+var hh = document.getElementsByTagName('h2')[0];
+//其次获得元素节点内部的子节点(firstChild/lastChild)
+console.log(hh.firstChild);//<TextNode textContent="获得文本节点(对象)">
+
+//获得文本节点内部的文本信息 nodeValue
+console.log(hh.lastChild.nodeValue);//获得文本节点(对象)
+
+console.log(hh.firstChild.nodeType); //3 文本节点
+</script>

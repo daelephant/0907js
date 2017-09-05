@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>属性值操作</h2>
+        <input type="text" addr="beijing" id="mingzi" name="username"  value="tom" class="orange" />
+        <br /><br />
+        <input type="button" value="获取" onclick="f1()" />
+    </body>
+</html>
+
+<script type="text/javascript">
+var name1 = document.getElementsByTagName('input')[0];//var 的名字最好不要用系统内置名比如name、value等
+//console.log(name1.type);
+console.log(name1.getAttribute('value'));
+function f1(){
+    //获得属性信息: 
+    //1)节点.属性名称 该方式只能获得w3c规定的属性
+    console.log(name1.type);//text
+    console.log(name1.id);//mingzi
+    console.log(name1.name);//username
+    console.log(name1.value);//tom
+    //"class"是js的关键字需要变为className使用
+    console.log(name1.className);//orange
+    //2)getAttribute()对于"规定的、自定义"属性都可以获取
+    console.log(name1.getAttribute('addr'));//beijing
+    console.log(name1.getAttribute('value'));//tom
+}
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>获得元素节点(对象)</h2>
+        <input type="text" id="username" name="mingzi" value="jack" /><br />
+        <input type="text" id="useremail" name="youxiang" value="jack@163.com" /><br />
+    </body>
+</html>
+<script type="text/javascript">
+//③ document.getElementsByName(name属性值);
+//   该方法同②也返回一个集合列表
+//   该方式不推荐使用,存在浏览器兼容性问题
+//   原因：有的浏览器要求被处理的节点必须是form表单的表单域信息
+
+var name = document.getElementsByName('mingzi');
+console.log(name);//NodeList[input#username 属性(attribute)值 = "jack"]
+
+//通过集合列表获得具体对象
+console.log(name[0]);//<input id="username" type="text" value="jack" name="mingzi">
+console.log(name.item(0));//<input id="username" type="text" value="jack" name="mingzi">
+</script>

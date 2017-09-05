@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function jiazai(){
+            var hh = document.getElementsByTagName('h2')[0];
+            hh.onmouseover = function(){
+                //this 在事件处理函数里边，代表事件节点对象本身
+                //this  与 hh 等效
+                // 在javascript的事件里边，this关键字在99%的情况下都代表“事件节点对象”本身
+                hh.style.color = "blue";
+                this.style.backgroundColor = "orange";
+            }
+        }
+        function f1(){
+            console.log('itcast');
+        }
+        //window.onload = 有名函数/匿名函数；
+        window.onload = jiazai; //实现加载事件  有名函数
+//        window.onload = f1; //实现加载事件  有名函数会覆盖上一条加载。所以用下面方法，加载多个函数
+        window.onload = function(){//匿名函数
+            jiazai();
+            f1();
+        }
+        </script>
+
+        <style type="text/css">
+        h2{background-color:gray;}
+        </style>
+    </head>
+    <body>
+        <h2>加载事件</h2>
+    </body>
+</html>

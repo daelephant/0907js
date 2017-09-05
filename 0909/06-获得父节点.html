@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>获得父节点</h2>
+        <ul>
+            <li>哈尔滨</li>
+            <li>长春</li>
+            <li>沈阳</li>
+        </ul>
+    </body>
+</html>
+<script type="text/javascript">
+//获得父节点
+var ull = document.getElementsByTagName('ul')[0];
+
+console.log(ull.parentNode);//<body>
+console.log(ull.parentNode.parentNode);//<html>
+////html根节点的父节点就是"Document节点"
+console.log(ull.parentNode.parentNode.parentNode);//Document
+console.log(ull.parentNode.parentNode.parentNode.nodeType);//9 文档节点
+//console.log(ull.parentNode.parentNode.parentNode.parentNode);//null
+</script>

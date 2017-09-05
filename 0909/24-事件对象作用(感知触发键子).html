@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>事件对象作用</h2>
+        <input type="text" id="username" />
+    </body>
+</html>
+<script type="text/javascript">
+//感知被触发键子信息
+var it = document.getElementById('username');
+it.addEventListener('keydown',function(evt){
+    //alert(evt);//[object KeyboardEvent]
+    var num = evt.keyCode;  //获得被触发键子的"数值码"
+    if(num==38){
+        console.log('上');
+    }
+    if(num==40){
+        console.log('下');
+    }
+    if(num==37){
+        console.log('左');
+    }
+    if(num==39){
+        console.log('右');
+    }
+});
+</script>

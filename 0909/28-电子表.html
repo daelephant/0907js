@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //获得时间并显示
+        function showtime(){
+            var timer = new Date(); //获得当前时间的事件对象
+
+            //获得“年、月、日、时、分、秒”信息
+            var year = timer.getFullYear();
+            var month = timer.getMonth();
+            var date = timer.getDate();
+
+            var hour = timer.getHours();
+            var minute = timer.getMinutes();
+            var second = timer.getSeconds();
+            // 2015-09-09 17:22:36
+            var s = year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second;
+            //显示时间
+            document.getElementById('result').innerHTML = s;
+        }
+        var shi = 0;
+        window.onload = function(){
+            start();
+        }
+        function stop(){
+            window.clearInterval(shi);//通过"shi"进行停止间隔函数操作
+        }
+        function start(){
+            shi = window.setInterval("showtime()",1000);
+            console.log(shi);//2数值类型信息
+        }
+        </script>
+    </head>
+    <body>
+        <h2>电子表</h2>
+        <div id="result"></div>
+        <input type="button" value="停" onclick="stop()" />
+        <input type="button" value="开始" onclick="start()" />
+    </body>
+</html>

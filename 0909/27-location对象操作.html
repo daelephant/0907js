@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function f1(){
+            //获得地址栏信息
+            console.log(window.location.href);
+        }
+        function f2(){
+            //设置地址栏信息(页面要根据信息内容做跳转)
+            //alert('操作成功！');
+            //window.location.href = "./25-register.html";
+            location.href = location.href;//往本身页面跳转，页面"刷新"操作
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>location对象操作地址栏信息</h2>
+        <input type="button" value="获取" onclick="f1()" />
+        <input type="button" value="设置" onclick="f2()" />
+    </body>
+</html>

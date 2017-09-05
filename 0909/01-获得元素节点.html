@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>获得元素节点(对象)</h2>
+        <input type="text" id="username" value="jack" /><br />
+        <input type="text" id="useremail" value="jack@163.com" /><br />
+    </body>
+</html>
+<script type="text/javascript">
+//① document.getElementById(id属性值);
+var name = document.getElementById('username');
+console.log(name);//<input id="username" type="text" value="jack">
+var email = document.getElementById('useremail');
+console.log(email);//<input id="useremail" type="text" value="jack@163.com">
+</script>
