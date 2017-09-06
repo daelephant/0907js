@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //特别字符集
+        //在没有特殊限制的时候就是“单次”匹配
+        //从左往右匹配到第一个符合模式的内容即可
+        //^ (托字符) : 匹配输入字符串的开始位置(托字符)
+        //$  : 匹配输入字符串的结尾位置。
+
+        var str = "Tomorrow is Sunday day";
+        var reg = /Sunday/; //["Sunday"]
+        var reg = /^Sunday/; //null  Sunday在目标字符串的“开始”位置出现
+        var reg = /^Tomorrow/;//["Tomorrow"]
+
+        var reg = /Sunday$/; //null  Sunday在目标字符串的“结尾”位置出现
+        var reg = /day$/;//["day"]
+
+        //^和$ 两符号要出现在每个正常的正则表达式里边
+        //作用：可以“完整”地匹配输入字符串信息
+        //手机号码验证：13开始，后续有9位数字，不能添加其余内容
+        var str = "13987642134";
+        var reg = /^13[0-9]{9}$/; //{m}前边单元严格出现m次
+        
+        //匹配字符串  被匹配字符串.match(正则内容)
+        // 返回匹配到的结果
+        var rst = str.match(reg);
+        console.log(rst);
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

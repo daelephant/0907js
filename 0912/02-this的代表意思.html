@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //this的代表意思
+        //① window
+        var subject = "javascript语言";
+        function getInfo(){
+            //subject变量的上级对象是window
+            console.log(this);//Window
+            console.log('我们正在学习'+this.subject);
+        }
+        getInfo();
+
+        //② 元素节点对象
+        window.onload = function(){
+            var ben = document.getElementsByTagName('li')[0];
+            ben.onmouseover = function(){
+                //以下this代表ben的元素节点对象
+                console.log(this);//<li>奔驰</li>
+                console.log(ben);//<li>奔驰</li>
+                this.style.backgroundColor = "pink";
+                ben.style.color = "red";
+            }
+        }
+
+        //③ 代表调用该方法的当前对象
+        var cat = {mingzi:'kitty',climb:function(){console.log(this.mingzi+"在爬树")}};
+        cat.climb();//kitty在爬树  climb方法内部this目前代表cat对象
+
+        //④ call和apply方法里边任意代表其他对象
+        var pig = {mingzi:'小黑'};
+        var wolf = {mingzi:'north'};
+        cat.climb.call(pig); //小黑在爬树  climb方法内部this指向pig
+        cat.climb.call(wolf); //north在爬树  climb方法内部this指向wolf
+
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+        <ul>
+            <li>奔驰</li>
+            <li>宝马</li>
+            <li>奥迪</li>
+        </ul>
+    </body>
+</html>

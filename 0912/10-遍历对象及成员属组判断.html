@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //遍历对象 及 成员属组判断
+        function Tiger(){
+            this.color = "yellow";
+            this.leg = 4;
+            this.act = function(){
+                console.log('猛虎扑食');
+            }
+            this.weapon = "嘶吼";
+        }
+        Tiger.prototype = {addr:'beijing',weight:230};//继承对象
+        var south = new Tiger();
+
+        //遍历对象
+        //for(var 成员变量 in  对象){}
+        for(var k in south){
+            //console.log(k+"--"+south[k]);
+            //判断成员是本身的 还是 继承的
+            //对象.hasOwnProperty(成员名称)判断成员是否是本身的，返回boolean
+            if(south.hasOwnProperty(k))
+                console.log("自己的:"+k);
+            else
+                console.log('继承的:'+k);
+        }
+
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //异常
+        var weather = "sunshine";
+        var week = "Saturday";
+
+        console.log('天气:'+weather);
+        console.log('星期:'+week);
+
+        //console.log('温度:'+temp);//ReferenceError: temp is not defined
+                                //运行时错误  Reference引用/名字没有找到
+        //var num = new 30();//TypeError: 30 is not a constructor  30不是一个构造器
+        var per = new eval();//TypeError: eval is not a constructor eval不是一个构造器
+
+        console.log(1234);
+        console.log(5678);
+        console.log("... ...");
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //静态成员
+        function Animal(){
+            this.age = 5;
+            this.leg = 4;
+        }
+        //给 【Animal函数对象】 设置成员
+        Animal.color = "black";
+        Animal.run = function(){
+            console.log('在后院奔跑');
+        }
+        var wangcai = new Animal();//实例化一个【普通对象wangcai】
+        
+        //以上具体有两种对象：函数对象、普通对象
+        //其中函数对象的成员(color/run)就是“静态成员”
+        //两种对象有各自访问的成员
+        console.log(Animal.color);//black
+        Animal.run();//在后院奔跑
+        console.log(wangcai.age); //5
+        console.log(wangcai.leg); //4
+
+        //注意两种对象的成员不能交叉访问
+        console.log(wangcai.color);//undefined
+        console.log(Animal.age);//undefined
+
+
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

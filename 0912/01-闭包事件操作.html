@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //点击li弹出内部对应的信息(用到闭包)
+        window.onload = function(){
+            var lis = document.getElementsByTagName('li');
+            for(var i=0; i<lis.length; i++){
+//                lis[i].onclick = clk(i);//方法一：传统闭包函数
+
+                //匿名函数自调用   方法二：匿名闭包  实现立即调用
+                lis[i].onclick = (function(n){
+                    return function(){
+                        alert(lis[n].firstChild.nodeValue);
+                    }
+                })(i);
+            }
+
+//            function clk(n){
+//                return function (){
+//                    alert(lis[n].firstChild.nodeValue);
+//                }
+//            }
+        }
+
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+        <ul>
+            <li>奔驰</li>
+            <li>宝马</li>
+            <li>奥迪</li>
+        </ul>
+    </body>
+</html>

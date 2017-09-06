@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //原型继承
+        //① 函数.prototype = 对象;         //继承对象
+        //② 函数.prototype.成员名称 = 值;   //继承单一成员
+        function Tiger(){
+            this.color = "yellow";
+            this.leg = 4;
+            this.act = function(){
+                console.log('猛虎扑食');
+            }
+        }
+        //继承单一成员，后期实例化的对象都会拥有该成员
+        Tiger.prototype.eat = function(){
+            console.log('吃一个狼');
+        }
+        Tiger.prototype.age = 5;
+
+        var north = new Tiger();
+        console.log(north);
+        
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

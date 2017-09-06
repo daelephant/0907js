@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //复制继承
+        function Tiger(){
+            this.leg = 4;
+            this.color = "yellow";
+        }
+        Tiger.prototype.extend = function(obj){
+            //获得(遍历)obj的每个成员，赋予给当前对象this
+            //this代表调用该方法的当前对象(south)
+            for(var k in obj){
+                //复制成员，复制本身没有的成员
+                if(this.hasOwnProperty(k)===false){
+                    this[k] = obj[k];
+                }
+            }
+        }
+        var south = new Tiger();
+        var dog = {mingzi:'旺财',age:6,color:'white'};
+        var pig = {hobby:'sleep睡觉'};
+        //使得south对象同时继承多个对象(dog、pig)
+        south.extend(dog); //south把dog的成员复制一份
+        south.extend(pig); //south把pig的成员复制一份
+        console.log(south);//本身成员、dog成员、pig成员
+        var north = new Tiger();
+        console.log(north);//Tiger { leg=4, color="yellow", extend=function()}
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

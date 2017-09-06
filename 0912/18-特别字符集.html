@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //特别字符集
+        //在没有特殊限制的时候就是“单次”匹配
+        //从左往右匹配到第一个符合模式的内容即可
+
+        //+  : 其前面那个单元出现1次或以上
+        var str = "2015-09-12 is a SunShine Day";
+        var reg = /[0-9]+/; //["2015"]
+        
+        var str = "gooogle";
+        var reg = /go+gle/;//["gooogle"]
+        
+        //*  : 其前面那个单元出现0次或以上
+        var str = "ggle";
+        var reg = /go*gle/;//["ggle"]
+
+        var str = "hello beijing";
+        var reg = /[0-9]*/;//[""]  hello前边出现0次数字(没有出现数字)
+        
+        //?  : 其前面那个单元出现0次或1次
+        var str = "ggle";
+        var reg = /go?gle/;//["gogle"]
+
+        //匹配字符串  被匹配字符串.match(正则内容)
+        // 返回匹配到的结果
+        var rst = str.match(reg);
+        console.log(rst);
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

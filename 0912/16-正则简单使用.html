@@ -7,23 +7,14 @@
         <meta name="keywords" content="" />
 
         <script type="text/javascript">
-        //闭包使用规则
+        //正则简单使用
+        var str = "this is Saturday"; //被匹配字符串
+        var reg = /is/; //声明一个正则表达式
 
-        function f1(num){
-            function f2(){
-                console.log('数字:'+num);
-            }
-            return f2;
-        }
-        var fa = f1(100);
-        var fb = f1(110);
-        var fc = f1(120);
-
-        f1(300)();//f1(300)是f2函数。调用需要()
-        fa();   //数字:【100】  110  100
-        fb();   //数字:【110】  110  100
-        fc();   //数字:【120】
-
+        //匹配字符串  被匹配字符串.match(正则内容)
+        // 返回匹配到的结果
+        var rst = str.match(reg);
+        console.log(rst);
         </script>
 
         <style type="text/css">

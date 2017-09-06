@@ -7,23 +7,9 @@
         <meta name="keywords" content="" />
 
         <script type="text/javascript">
-        //闭包使用规则
-
-        function f1(num){
-            function f2(){
-                console.log('数字:'+num);
-            }
-            return f2;
-        }
-        var fa = f1(100);
-        var fb = f1(110);
-        var fc = f1(120);
-
-        f1(300)();//f1(300)是f2函数。调用需要()
-        fa();   //数字:【100】  110  100
-        fb();   //数字:【110】  110  100
-        fc();   //数字:【120】
-
+        //以下代码会产生语法错误(编译错误)
+        ()alert(123);
+        
         </script>
 
         <style type="text/css">

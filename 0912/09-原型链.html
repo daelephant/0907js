@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //原型链
+        function Cat(){this.color = "gray";}
+        var kitty = new Cat();
+
+        function Tiger(){this.act = "猛虎下山";}
+        Tiger.prototype = kitty;
+        var north = new Tiger();
+
+        function Wolf(){this.eye = "闪闪发光";}
+        Wolf.prototype = north;
+        var seven = new Wolf();
+
+        function Dog(){this.hobby = "看家护林";}
+        Dog.prototype = seven;
+
+        var wangcai = new Dog();
+        console.log(wangcai);
+        console.log(wangcai.constructor);
+
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
