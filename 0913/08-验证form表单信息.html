@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //给form表单设置提交事件
+        window.onload = function(){
+            var fm = document.getElementsByTagName('form')[0];
+            fm.onsubmit = function(evt){
+
+
+                //获得用户输入的邮箱信息
+                var email = document.getElementById('useremail').value;  //node.getAttribute('value')
+                var reg = /^\w{5,15}@[a-z0-9]+(\.[a-z]+)+$/;//匹配邮箱的正则
+                if(email.match(reg)===null){
+                    alert('邮箱格式不正确');
+                    //验证失败阻止浏览器跳转
+                    //return false;     //dom1级阻止方式
+                    evt.preventDefault();//dom1和dom2级阻止方式
+                }
+            }
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+        <form method="post" action="08.php">
+            <p>用户名:<input type="text" id="username" /></p>
+            <p>密码:<input type="text" id="userpwd" /></p>
+            <p>邮箱:<input type="text" id="useremail" /></p>
+            <p><input type="submit" value="注册" /></p>
+        </form>
+    </body>
+</html>

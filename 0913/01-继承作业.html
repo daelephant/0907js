@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //复制继承
+        function Animal(){
+            this.color = "black";
+            this.leg = 4;
+        }
+        Animal.prototype.extend = function(obj){
+            for(var k in obj){
+                //只复制本身不存在的成员
+                if(this.hasOwnProperty(k)===false){
+                    this[k] = obj[k];
+             }}}
+        var wolf = {tail:'笔直的尾巴'};
+        var tiger = {say:'狐假虎威'};
+        var dog = {hobby:'散步'};
+        //cat1/cat2/cat3 每个对象按照自己的需求，复制成员到本身内部
+        var cat1 = new Animal();
+        cat1.extend(wolf);
+        var cat2 = new Animal();
+        cat2.extend(tiger)
+        var cat3 = new Animal();
+        cat3.extend(dog);
+        console.log(cat1);//Animal { color="black", leg=4, tail="笔直的尾巴", 更多...}
+        console.log(cat2);//Animal { color="black", leg=4, say="狐假虎威", 更多...}
+        console.log(cat3);//Animal { color="black", leg=4, hobby="散步", 更多...}
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //正向预查(匹配、不匹配)
+        var str = "http://web.0710.com/shop/index.php?name=jim&addr=beijing&age=23";
+
+        //① 正向匹配(获得内容字符串右边出现"=等号"信息)
+        //通过正则获得上述地址栏的get变量的名称(name/addr/age..)
+        //var reg = /[a-z]+(?=辅助条件string|reg)/;
+        var reg = /[a-z]+(?==)/g;//["name", "addr", "age"]
+
+        //② 正向不匹配
+        //var reg = /匹配内容模式(?!辅助条件string|reg)/;
+        //匹配的字母字符串右边"不能"出现数字
+        var reg = /[a-z]{8}(?!\d)/;
+        var str = "shenyang#liaoning";//["shenyang"]
+        var str = "beijingt2015";//null
+        var str = "haerbing&&&&&&&";//["haerbing"]
+
+        var rst = str.match(reg);
+        console.log(rst);
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
