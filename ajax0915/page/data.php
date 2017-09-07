@@ -1,8 +1,8 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 //传统方式实现分页效果
-$link = mysql_connect('localhost','root','123456');
-mysql_select_db('shop0710',$link);
+$link = @mysql_connect('localhost','elephant','hello2017');
+mysql_select_db('shop0825',$link);
 mysql_query('set names utf8');
 
 //实现数据分页

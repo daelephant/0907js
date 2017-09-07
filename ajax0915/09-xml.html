@@ -14,7 +14,7 @@
             xhr.onreadystatechange = function(){
                 if(xhr.readyState==4){
                     var xmldom = xhr.responseXML;
-                    //alert(xhr.responseXML);//object XMLDocument(类似Document对象)
+//                    alert(xhr.responseXML);//object XMLDocument(类似Document对象)
                                             //XMLDocument是根节点messages的父节点
                     var messages = xhr.responseXML.firstChild;
                     console.log(messages);//<messages>根节点

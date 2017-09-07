@@ -8,8 +8,9 @@
 
         <script type="text/javascript">
         function checkname(){
+            //
             //获得用户名信息，并传递给服务器端
-            var nm = document.getElementById('username').value;
+            var nm = document.getElementById('username').value;//获得值
 
             //对nm的特殊符号(& =等)进行编码处理
             nm = encodeURIComponent(nm);
@@ -17,7 +18,8 @@
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function(){
                 if(xhr.readyState==4){
-                    alert(xhr.responseText);
+//                    alert(xhr.responseText);
+                    document.getElementById('result').innerHTML = xhr.responseText;//赋值
                 }
             }
             xhr.open('get','./04.php?name='+nm+'&age=20');
@@ -29,6 +31,7 @@
         <h2>ajax之get方式请求(ajax版用户名校验)</h2>
         <p>用户名：<input type="text" id="username" onblur="checkname()" /><br /></p>
         <p>密码：<input type="text" id="userpwd" /><br /></p>
+        <div id="result"></div>
 
     </body>
 </html>
