@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+                alert(1111);
+            }
+        }
+        //xhr.open('get','./08.php',false);// 同步请求('弹出框'和'h2'一前一后看到)
+        xhr.open('get','./08.php',true);// 异步请求('弹出框'和'h2'同时看到)
+        xhr.send(null);
+
+//        var xhr1 = new XMLHttpRequest();
+//        xhr1.onreadystatechange = function(){
+//            if(xhr1.readyState==4){
+//                console.log(2222);
+//            }
+//        }
+//        xhr1.open('get','./08.php');
+//        xhr1.send(null);
+        </script>
+    </head>
+    <body>
+        <h2>ajax study</h2>
+    </body>
+</html>

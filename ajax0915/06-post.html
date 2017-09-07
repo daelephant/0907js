@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function checkname(){
+            //获得用户名信息，并传递给服务器端
+            var nm = document.getElementById('username').value;
+            //对nm的特殊符号(& =等)进行编码处理
+            nm = encodeURIComponent(nm);
+            //把传递给服务器端的数据组织为请求字符串
+            var info = 'name='+nm+'&color=yellow';
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    alert(xhr.responseText);
+                }
+            }
+            xhr.open('post','./06.php?addr=beijing');
+            //post方式是把数据模拟为form表单的样子提交给服务器
+            //form表单的数据是组织为“xml格式”传递给服务器端
+            //以下setRequestHeader()方法必须在open之后设置
+            //作用：把数据组织为xml格式
+            xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+            xhr.send(info);
+        }
+        </script>
+    </head>
+    <body>
+        <h2>ajax之post方式请求(ajax版用户名校验)</h2>
+        <p>用户名：<input type="text" id="username" onblur="checkname()" /><br /></p>
+        <p>密码：<input type="text" id="userpwd" /><br /></p>
+
+    </body>
+</html>

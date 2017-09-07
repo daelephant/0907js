@@ -7,15 +7,19 @@
         <meta name="keywords" content="" />
 
         <script type="text/javascript">
-        //以下代码会产生语法错误(编译错误)
-        ()alert(123);
-
+        function f1(){
+            var xhr = new XMLHttpRequest();
+            //给请求地址设置随机数，避免出现缓存效果
+            xhr.open('get','./10.php?'+Math.random());
+            xhr.send(null);
+        }
         </script>
 
         <style type="text/css">
         </style>
     </head>
     <body>
-        <h2></h2>
+        <h2>ajax发起对服务器端的请求(缓存效果)</h2>
+        <input type="button" value="触发" onclick="f1()" />
     </body>
 </html>

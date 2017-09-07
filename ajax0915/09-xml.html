@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function showxml(){
+            //ajax负责获得服务器端的xml信息
+            //javascript中的dom技术负责解析xml信息
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    var xmldom = xhr.responseXML;
+                    //alert(xhr.responseXML);//object XMLDocument(类似Document对象)
+                                            //XMLDocument是根节点messages的父节点
+                    var messages = xhr.responseXML.firstChild;
+                    console.log(messages);//<messages>根节点
+                    //在主流浏览器里边，childNodes/firstChild/lastChild/nextSibling/previousSibing等方法
+                    //要给计算回车、空白节点
+                    //console.log(messages.childNodes);//[空白,msg,空白,msg,空白]
+                    //var msgs = xmldom.getElementsByTagName('msg');
+                    //console.log(msgs);//HTMLCollection[msg, msg]
+                    //【dom对象、元素节点对象 都可以调用getElementsByTagName()】
+                    //msgs[0]-->元素节点对象
+                    //for(var k in msgs[0]){
+                    //    console.log(k); //输出 元素节点对象 的成员名称
+                        //众多的方法之一： getElementsByTagName
+                    //}
+
+                    var xmldom = xhr.responseXML;
+                    var msgs = xmldom.getElementsByTagName('msg');
+                    var s = "";
+                    for(var i=0; i<msgs.length; i++){
+                        var sder = msgs[i].getElementsByTagName('sender')[0].firstChild.nodeValue;
+                        var jie = msgs[i].getElementsByTagName('jie')[0].firstChild.nodeValue;
+                        var cnt = msgs[i].getElementsByTagName('content')[0].firstChild.nodeValue;
+                        s += "发送者："+sder+",接收者："+jie+",消息："+cnt+"<br />";
+                    }
+                    document.getElementById('result').innerHTML = s;
+                }
+            }
+            xhr.open('get','./09.xml');
+            xhr.send(null);
+        }
+        </script>
+    </head>
+    <body>
+        <h2>实现对xml的接收处理</h2>
+        <input type="button" value="请求" onclick="showxml()" />
+        <div id="result"></div>
+    </body>
+</html>

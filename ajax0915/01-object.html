@@ -1,0 +1,16 @@
+<script type="text/javascript">
+//浏览器兼容考虑
+if(typeof XMLHttpRequest !=='undefined'){
+    //① 主流浏览器(火狐、chrome、safari、opera、IE7以上版本)方式
+    var xhr = new XMLHttpRequest();
+    console.log(xhr);//XMLHttpRequest { readyState=0, timeout=0, withCredentials=false, 更多...}
+} else {
+    //② IE(6/7/8)浏览器方式
+    var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    var xhr = new ActiveXObject("Msxml2.XMLHTTP");
+    var xhr = new ActiveXObject("Msxml2.XMLHTTP.3.0");
+    //var xhr = new ActiveXObject("Msxml2.XMLHTTP.5.0");
+    var xhr = new ActiveXObject("Msxml2.XMLHTTP.6.0");
+    alert(xhr);//[object]
+}
+</script>
