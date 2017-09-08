@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //javascript+ajax无刷新方式form表单提交
+        window.onload = function(){
+            var fm = document.getElementsByTagName('form')[0];
+            //表单提交事件
+            fm.onsubmit = function(){
+                alert(1111);
+                //① 收集用户输入的表单域信息[FormData]
+                //   html5的新技术"FormData表单数据对象",可以快速收集表单信息
+                var fd = new FormData(fm); //实例化FormData的对象
+                //② 并把收集的信息提交给服务器端[ajax]
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState==4){
+                        alert(xhr.responseText);
+                    }
+                }
+                xhr.open('post','./05.php');
+                //xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+                xhr.send(fd);
+                //阻止浏览器form表单的提交动作
+                //evt.preventDefault();
+                window.event.returnValue = false;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h2>用户注册FormData</h2>
+        <!--
+        FormData使用注意：
+        ① 无需调用setRequestHeader()方法
+        ② 要求每个表单域里边必须有name属性
+        ③ 表单域信息内部有特殊符号(& =等)无需编码
+        -->
+        <form method="post" action="./1001.php">
+            <p>用户名：<input type="text" id="mingzi" name="username" /></p>
+            <p>密码：<input type="password" id="mima" name="userpwd" /></p>
+            <p>邮箱：<input type="text" id="youxiang" name="useremail" /></p>
+            <p><input type="submit" value="注册" /></p>
+        </form>
+    </body>
+</html>

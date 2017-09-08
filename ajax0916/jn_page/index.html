@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //ajax无刷新方式获得第n页信息
+        function showpage(url){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    eval("var jn_info="+xhr.responseText);
+                    console.log(jn_info[0]);//[{},{},{},{},{},{},{},页码列表]
+                    //遍历jn_info  [{},{},{},{},{},{},{},页码列表]
+                    var s = "<table><tr style=\"font-weight:bold;\"><td>序号</td><td>名称</td><td>价格</td><td>数量</td><td>重量</td></tr>";
+                    for(var m=0; m<jn_info.length-1; m++){
+                        s += "<tr><td>"+jn_info[m].i+"</td>";
+                        s += "<td>"+jn_info[m].n+"</td>";
+                        s += "<td>"+jn_info[m].p+"</td>";
+                        s += "<td>"+jn_info[m].u+"</td>";
+                        s += "<td>"+jn_info[m].w+"</td></tr>";
+                    }
+                    s += "<tr><td colspan='5'>"+jn_info[jn_info.length-1]+"</td></tr>";
+                    s += "</table>";
+                    document.getElementById('result').innerHTML = s;
+                }
+            }
+            xhr.open('get',url);
+            xhr.send(null);
+        }
+        window.onload = function(){
+            showpage('./data.php?page=1');//获得分页信息
+        }
+        </script>
+        <style type="text/css">
+            h2{width:700px; margin:auto;
+            background-color:pink;text-align:center;}
+            table{width:700px; border:1px solid black; margin:auto; border-collapse:collapse;}
+            td {border:1px solid black;}
+        </style>
+    </head>
+    <body>
+        <h2>ajax无刷新分页效果</h2>
+        <div id="result"></div>
+    </body>
+</html>

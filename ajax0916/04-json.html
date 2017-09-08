@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function f1(){
+            //ajax去服务器端请求json信息回来
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    //alert(xhr.responseText);//{"city":"\u5317\u4eac","wind":"south","temp":"26du"}
+                    eval("var jn_info="+xhr.responseText);//把字符串信息变为 实体对象 信息
+                    console.log(jn_info.city);
+                    console.log(jn_info.wind);
+                    console.log(jn_info.temp);
+                }
+            }
+            xhr.open('get','./04.php');
+            xhr.send(null);
+        }
+        //javascript中把"字符串对象"信息 变为 "实体对象"信息
+        //var obj = "{name:'kitty',age:5}";
+        //eval("var cat="+obj); //eval("var cat={name:'kitty',age:5}");
+        //console.log(cat);//Object { name="kitty", age=5}
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>通过javascript语言接收处理json信息</h2>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>
