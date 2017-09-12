@@ -62,6 +62,7 @@
             var len = 20;//蛇节的边长
             //定义小蛇(二维数组)
             this.snakebody = [[0,1,'green',null],[1,1,'green',null],[2,1,'green',null],[3,1,'red',null]];
+            this.redirect = 'right';//设置默认移动方向，否则开始就显示kill youself
             //a绘制小蛇
             this.showsnake = function () {
                 //遍历snakebody创建的4个div蛇节、设置样式、追加给body
@@ -109,8 +110,32 @@
                 var snakeX = this.snakebody[this.snakebody.length-1][0];
                 var snakeY = this.snakebody[this.snakebody.length-1][1];
                 //食物坐标 food.foodX/food.foodY
-                if
-//                this.showsnake();
+                if(snakeX ==food.foodX && snakeY==food.foodY){
+                    //增加蛇节：增加蛇节坐标 等于小蛇“尾部射界的旧坐标”
+                    var newjie = [this.snakebody[0][0],this.snakebody[0][1],'green',null];
+                    //unshift(给数组头部追加元素)
+                    this.snakebody.unshift(newjie);
+                    //生成新食物
+                    food.showfood();
+                }
+                //控制小蛇在指定范围移动
+                if(snakeX<0 || snakeX>29 || snakeY<0 || snakeY>15){
+                    alert('game over');
+                    clearInterval(mytime);//清除间隔函数
+                    return false;
+                }
+                //不能吃到自己(蛇头坐标 与 非蛇头坐标一致就是吃到自己)
+                for(var k=0; k<this.snakebody.length-1;k++){
+                    //遍历非蛇头坐标
+                    if(snakeX==this.snakebody[k][0] && snakeY==this.snakebody[k][1]){
+                        alert('game over kill by yourself');
+                        clearInterval(mytime);
+                        return false;
+
+                    }
+                }
+//                根据新坐标重新绘图
+                this.showsnake();
 
             }
 
@@ -125,7 +150,7 @@
 
             snake = new Snake();//snake对象是全局的，他有隐式原型__proto__,函数有显式原型prototype
             snake.showsnake();//绘制小蛇
-//            snake.movesnake();//移动小蛇
+//           snake.movesnake();//移动小蛇
             //setInterval(全局变量信息，时间)定时器
             mytime = setInterval("snake.movesnake()",200);
             //给document设置键盘事件，控制小蛇移动方向
