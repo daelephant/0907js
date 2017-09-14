@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        h2{width: 600px;margin: auto;
+                background-color: pink;text-align: center;}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Ajax无刷新分页效果test</title>
+
+    <script type="text/javascript">
+        <!--Ajax无刷新方式获取第n页信息-->
+        function showpage(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState ==4){
+                    document.getElementById('result').innerHTML = xhr.responseText;
+                }
+            }
+            xhr.open('get',url);
+            xhr.send(null);
+        }
+        window.onload = function () {
+            showpage("./data.php?page=1");//获得分页信息
+        }
+
+    </script>
+</head>
+<body>
+    <h2>Ajax无刷新分页</h2>
+    <div id="result"></div>
+</body>
+</html>
