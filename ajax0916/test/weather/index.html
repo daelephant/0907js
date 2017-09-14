@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript">
+            function f1(){
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState==4){
+                        //通过eval()把接收的json字符串变成真实的对象信息
+                        //alert(xhr.responseText);
+                        eval("var jn_info="+xhr.responseText);
+                        var s = "城市:"+jn_info.weatherinfo.city+"****风向："+jn_info.weatherinfo.WD+"*****风速："+jn_info.weatherinfo.WS;
+                        document.getElementById('result').innerHTML = s;
+                    }
+                }
+                //ajax不能跨域请求，但是可以请求本域的地址，跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。
+                //xhr.open('get','http://www.weather.com.cn/adat/sk/101010100.html');
+                //通过php代理获得天气信息：
+                xhr.open('get','./data.php');
+                xhr.send(null);
+            }
+        </script>
+        <!--<script type="text/javascript">-->
+        <!--function f1(){-->
+            <!--var xhr = new XMLHttpRequest();-->
+            <!--xhr.onreadystatechange = function(){-->
+                <!--if(xhr.readyState==4){-->
+                    <!--//alert(xhr.responseText);-->
+                    <!--eval("var jn_info="+xhr.responseText);-->
+                    <!--var s = "城市:"+jn_info.weatherinfo.city+"&#45;&#45;风向："+jn_info.weatherinfo.WD;-->
+                    <!--document.getElementById('result').innerHTML = s;-->
+                <!--}-->
+            <!--}-->
+            <!--//ajax不能跨域请求，但是可以请求本域的地址-->
+            <!--//xhr.open('get','http://www.weather.com.cn/adat/sk/101010100.html');-->
+            <!--xhr.open('get','./data.php');-->
+            <!--xhr.send(null);-->
+        <!--}-->
+        <!--</script>-->
+    </head>
+    <body>
+        <h2>ajax获取天气预报并显示</h2>
+        <input type="button" value="获取" onclick="f1()" />
+        <div id="result"></div>
+        <hr />
+        <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=64" width="540" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <!--<iframe width="130" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=4&color=%2300B0F0&icon=3&wind=1&num=6"></iframe>-->
+
+        <hr />
+        <!--<iframe name="weather_inc" src="http://tianqi.xixik.com/cframe/11" width="500" height="15" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>-->
+
+    </body>
+</html>

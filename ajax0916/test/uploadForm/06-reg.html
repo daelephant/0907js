@@ -51,6 +51,20 @@
                             alert(xhr.responseText);
                         }
                     }
+                    xhr.upload.onprogress = function(evt){
+                        //该事件每隔100ms左右就执行一次
+                        //并可以通过事件对象感知附件信息
+                        //console.log(evt);
+                        //附件已经上传大小
+                        var lod = evt.loaded;
+                        //附件总大小
+                        var tal = evt.total;
+                        //计算上传百分比
+                        var per = Math.floor((lod/tal)*100)+"%";
+                        //给son的div设置宽度百分比
+                        document.getElementById('son').innerHTML = per;
+                        document.getElementById('son').style.width = per;
+                    }
                     xhr.open('post','./06.php');
                     xhr.send(fd);
 
@@ -60,6 +74,11 @@
             }
 
         </script>
+        <style type="text/css">
+            #pat{width:450px;height: 30px;border: 4px solid blue;}
+            #son{width:0;height: 100%;background-color: #81b432;}
+
+        </style>
     </head>
     <body>
         <h2>用户注册</h2>
@@ -67,6 +86,7 @@
             <p>用户名：<input type="text" id="mingzi" name="username" /></p>
             <p>密码：<input type="password" id="mima" name="userpwd" /></p>
             <p>邮箱：<input type="text" id="youxiang" name="useremail" /></p>
+            <div id="pat"><div id="son"></div></div>
             <p>头像：<input type="file" id="touxiang" name="userpic" /></p>
             <p><input type="submit" value="注册" /></p>
         </form>
