@@ -16,6 +16,7 @@
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function(){
                     if (xhr.readyState ==4){
+//                        alert(xhr.responseText);
                         //接下来把字符串变为实体对象
                         eval("var jn_info="+xhr.responseText);
                         //得到jn_info = [{},{}];
@@ -30,7 +31,10 @@
                             //把已经获得的消息最大ID赋予给maxID
                             maxID = jn_info[i].id;
                         }
-                        document.getElementById('show_msg').innerHTML += s;//追加消息，需要html页面支持，所以放在onload事件
+                        var showdiv = document.getElementById('show_msg');
+                        showdiv.innerHTML += s;//追加消息，需要html页面支持，所以放在onload事件
+                       // 设置滚动条卷起高度
+                        showdiv.scrollTop =  showdiv.scrollHeight;
                     }
                 }
                 xhr.open('get','./data.php?maxID='+maxID);
@@ -38,6 +42,7 @@
 
             }
             window.onload = function(){
+                showmsg();
                 setInterval("showmsg()",2000);//每两秒执行一次
             }
 //            showmsg();
@@ -80,8 +85,9 @@
                 </div>
                 <div id="send">
                     <div id="control">
+                    <form>
                     颜色：
-                    <select name="color">
+                    <select name="color" id="color">
                         <option value="">请选择</option>
                         <option	style="color:#FF8888" value="#FF8888">爱的暗示</option>
                         <option	style="color:#00BBFF" value="#00BBFF">忧郁的蓝</option>
@@ -104,7 +110,7 @@
                         <option style="color:#000000" value="#000000">绝对黑色</option> 
                     </select>
                     表情：
-                    <select name="biaoqing">
+                    <select name="biaoqing" id="biaoqing">
                         <option value="">请选择</option>
                         <option value="笑着">笑着</option>
                         <option value="高兴地">高兴地</option>
@@ -145,8 +151,8 @@
                         <option value="依依不舍">依依不舍</option>
                     </select>
                     聊天对象：
-                    <select name="receiver">
-                        <option value="">所有的人</option> 
+                    <select name="receiver" id="receiver">
+                        <option value="所有的人">所有的人</option>
                         <option value="恶魔">恶魔</option>
                         <option value="甜甜">甜甜</option>
                         <option value="诸葛">诸葛</option>
@@ -154,8 +160,37 @@
                         <option value="郁金香">郁金香</option>
                     </select>
                     <br />
-                    <textarea id="msg"></textarea>
-                    <input type="button" value="发送" />
+                    <textarea id="msg" name="msg"></textarea>
+                    <input type="button" value="发送" onclick="sendmsg()" />
+                    <span id="sendresult"></span>
+                    </form>
+<script type="text/javascript">
+    function sendmsg(){
+        var fm = document.getElementsByTagName('form')[0];
+        //FormData收集表单信息
+        var fd = new FormData(fm);
+        //ajax提交表单信息到服务器存储
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+//                alert(xhr.responseText);
+                document.getElementById('sendresult').innerHTML = xhr.responseText;
+                //表单域信息归位处理//javascript运行错误，会停止向下继续执行，176行出错，则setinterval函数不触发
+                document.getElementById('color').value = "";
+                document.getElementById('biaoqing').value = "";
+                document.getElementById('receiver').value = "";
+                document.getElementById('msg').value = "";
+                //2s后清除提示信息
+                setInterval('hideresult()',2000);
+            }
+        }
+        xhr.open('post','./send.php');
+        xhr.send(fd);
+    }
+    function hideresult(){
+        document.getElementById('sendresult').innerHTML = "";
+    }
+</script>
 
                     </div>
                 </div>

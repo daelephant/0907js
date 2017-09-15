@@ -7,7 +7,7 @@
  */
 //获取最新的聊天信息
 header("content-type:text/html;charset=utf-8");
-$link = mysql_connect('localhost','elephant','hello2017');
+$link = @mysql_connect('localhost','elephant','hello2017');
 mysql_select_db('shop0825',$link);
 mysql_query('set names utf8');
 
