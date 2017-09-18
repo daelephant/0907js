@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //document.getElementsByTagName('h2')[0].style.backgroundColor = "pink";
+            //jquery简单使用
+            $('h2').css('background-color','green');
+            $('h2').css('color','blue');
+            $.get('./01.php',function(msg){
+                alert(msg);
+            });//ajax使用
+        }
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>jquery简单使用</h2>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //通过各种选择器获得页面上的各种元素节点
+            //① $("#id") id属性值获得元素节点
+            $("#username").css('background-color','gray');
+            $("#useremail").css('width','400px');
+
+            //② $("tag标签名称") 通过标签名称获得元素节点
+            $("h2").css('color','orange');
+            $('input').css('color','red'); //所有input框都变化
+
+            //③ $(".class属性值")  通过class属性值获得元素节点
+            $('.apple').css('font-size','25px'); //所有符合条件的
+
+            //④ $("*") 通配符选择器 (页面上所有节点)
+            //$("*").css('background-color','lightgreen');
+
+            //⑤ $("s1,s2,s3..") 联合选择器，只要符合"其中一个"条件即可
+            //   selector选择器 
+            $("#useremail,h2,p").css('color','blue');
+        }
+        </script>
+        <style type="text/css">
+        /*css选择器*/
+        input{}
+        #username{}
+        .apple{}
+        *{}  /*样式初始化*/
+        #useremail,h2{}
+        </style>
+    </head>
+    <body>
+        <h2>jquery基本选择器(灵感来之css样式选择器)</h2>
+        <input type="text" id="username" class="apple" value="xiaoming" /><br />
+        <input type="text" id="useremail" value="xiaoming@163.com" /><br />
+        <input type="text" id="addr" class="apple" value="北京海淀" /><br />
+        <p>Today is Friday</p>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //① $(s1 s2) 派生选择器
+            $('div span').css('background-color','green');  //关羽 刘备 张飞 阿斗 马超
+            //② $(s1 > s2) 直接子元素节点选择器
+            $('div > span').css('color','yellow'); //关羽 刘备 张飞 马超
+            //③ $(s1 + s2) 直接兄弟选择器
+            $('div + span').css('font-size','30px');//曹操
+            //④ $(s1 ~ s2) 后续全部兄弟关系选择器
+            $('div ~ span').css('background-color','purple'); //曹操  董卓
+        }
+        </script>
+    </head>
+    <body>
+        <h2>jquery层次选择器</h2>
+        <div>
+            <span>关羽</span>
+            <span>刘备</span>
+            <p>
+                <span>阿斗</span>
+            </p>
+            <span>张飞</span>
+        </div>
+        <span>曹操</span>
+        <p>孙权</p>
+        <span>董卓</span>
+        <div>
+            <span>马超</span>
+        </div>
+
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

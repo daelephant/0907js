@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="806a1873-bbfb-4e2a-93c9-e9a1c2af8fd4" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax0916/test/talk/send.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax0916/talk/index.html" afterPath="$PROJECT_DIR$/ajax0916/talk/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax0916/test/talk/css/talk.css" afterPath="$PROJECT_DIR$/ajax0916/test/talk/css/talk.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax0916/test/talk/data.php" afterPath="$PROJECT_DIR$/ajax0916/test/talk/data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax0916/test/talk/index.html" afterPath="$PROJECT_DIR$/ajax0916/test/talk/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/01-简单使用.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/01.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/02-基本选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/03-层次选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/04-并且选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/05-并且选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/06-内容过滤选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/07-表单域选中选择器.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/08-属性操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/09-属性操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/10-属性操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/11-class属性快捷操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/12-标签包含内容操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/13-css样式操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/13.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/14-复选框操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/15-下拉列表操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/16-单选按钮操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/17-复选框全选-全不选-反选操作.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/jquery-1.11.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jQuery0918/jquery-1.4.4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,36 +46,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ajax0916/test/talk/index.html">
+      <file leaf-file-name="01-简单使用.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery0918/01-简单使用.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.106723584">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding>
-                <marker date="1505460789115" expanded="true" signature="1255:1261" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax0916/talk/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.607142">
-              <caret line="26" column="69" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="69" />
-              <folding>
-                <marker date="1505457942315" expanded="true" signature="925:931" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="talk.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax0916/test/talk/css/talk.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="01.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery0918/01.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="17-复选框全选-全不选-反选操作.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery0918/17-复选框全选-全不选-反选操作.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-1.4.4.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jQuery0918/jquery-1.4.4.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46936116">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1430207396000" expanded="true" signature="33278:33311" placeholder="..." />
+                <marker date="1430207396000" expanded="true" signature="38572:38582" placeholder="..." />
+                <marker date="1430207396000" expanded="true" signature="38732:38754" placeholder="..." />
+                <marker date="1430207396000" expanded="true" signature="247973:248066" placeholder="..." />
+                <marker date="1430207396000" expanded="true" signature="248099:248192" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,10 +184,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="382" />
-    <option name="y" value="79" />
+    <option name="x" value="524" />
+    <option name="y" value="249" />
     <option name="width" value="1465" />
-    <option name="height" value="1077" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -192,7 +221,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,91 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ajax0916" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax0916" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax0916" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax0916" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0907js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax0916" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talk" />
+              <option name="myItemId" value="jQuery0918" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,6 +255,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,11 +267,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\phpStudy\WWW\0907js\jQuery0918" />
       <recent name="C:\phpStudy\WWW\0907js\ajax0916\test\talk" />
       <recent name="C:\phpStudy\WWW\0907js\ajax0916\test\weather" />
       <recent name="C:\phpStudy\WWW\0907js\ajax0916\test\php" />
       <recent name="C:\phpStudy\WWW\0907js\ajax0916\test\page" />
-      <recent name="C:\phpStudy\WWW\0907js\0913\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -506,7 +451,13 @@
       <option name="project" value="LOCAL" />
       <updated>1505381425035</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="over 0915&#10;">
+      <created>1505460906783</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1505460906783</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -522,12 +473,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="382" y="79" width="1465" height="1077" extended-state="0" />
+    <frame x="524" y="249" width="1465" height="879" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21394065" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905483" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32788944" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -594,7 +545,8 @@
     <MESSAGE value="commit 0907 content" />
     <MESSAGE value="commit 0906 content" />
     <MESSAGE value="Merge branch 'master' of https://github.com/daelephant/0907js&#10;&#10;# Conflicts:&#10;#&#9;ajax0916/test/page/data.php&#10;#&#9;ajax0916/test/page/index.html&#10;#&#9;ajax0916/test/page/page.class.php&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/daelephant/0907js&#10;&#10;# Conflicts:&#10;#&#9;ajax0916/test/page/data.php&#10;#&#9;ajax0916/test/page/index.html&#10;#&#9;ajax0916/test/page/page.class.php&#10;" />
+    <MESSAGE value="over 0915&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="over 0915&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -603,48 +555,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ajax0915/page/page.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="9" selection-start-line="134" selection-start-column="8" selection-end-line="137" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax0915/test/ajaxPage/page.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="401" selection-start-line="138" selection-start-column="401" selection-end-line="138" selection-end-column="401" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/0913/09-snake.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="17" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax0915/test/page/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax0915/test/ajaxPage/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding>
-            <marker date="1505182459321" expanded="true" signature="346:391" placeholder="..." />
-            <marker date="1505182459321" expanded="true" signature="574:653" placeholder="..." />
-            <marker date="1505182459321" expanded="true" signature="797:927" placeholder="..." />
-            <marker date="1505182459321" expanded="true" signature="935:1027" placeholder="..." />
-            <marker date="1505182459321" expanded="false" signature="948:965" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax0915/page/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -873,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.125">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,10 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <marker date="1505457737870" expanded="true" signature="445:532" placeholder="insert into message... " />
-            <marker date="1505457737870" expanded="true" signature="546:633" placeholder="insert into message... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,9 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.178571">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1442393920000" expanded="true" signature="362:449" placeholder="insert into message... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,15 +868,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1505445139723" expanded="true" signature="357:396" placeholder="select * fro... message" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax0916/test/talk/css/talk.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
+        <state vertical-scroll-proportion="0.3788904">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -985,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax0916/talk/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.607142">
+        <state vertical-scroll-proportion="0.7036536">
           <caret line="26" column="69" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="69" />
           <folding>
             <marker date="1505457942315" expanded="true" signature="925:931" placeholder="..." />
@@ -995,10 +891,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax0916/test/talk/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106723584">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
           <folding>
             <marker date="1505460789115" expanded="true" signature="1255:1261" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery0918/07-表单域选中选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery0918/01-简单使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery0918/01.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery0918/17-复选框全选-全不选-反选操作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery0918/jquery-1.4.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46936116">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1430207396000" expanded="true" signature="33278:33311" placeholder="..." />
+            <marker date="1430207396000" expanded="true" signature="38572:38582" placeholder="..." />
+            <marker date="1430207396000" expanded="true" signature="38732:38754" placeholder="..." />
+            <marker date="1430207396000" expanded="true" signature="247973:248066" placeholder="..." />
+            <marker date="1430207396000" expanded="true" signature="248099:248192" placeholder="..." />
           </folding>
         </state>
       </provider>

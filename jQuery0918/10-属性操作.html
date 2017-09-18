@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        function f1(){
+            //删除
+            //$().removeAttr(属性名称);
+            $("input:first").removeAttr('class');
+            $("input:first").removeAttr('id');
+            $("input:first").removeAttr('name');
+            $("input:first").removeAttr('value');
+            $("input:first").removeAttr('address');
+
+            //type属性禁止"删除、修改"操作
+            //$("input:first").removeAttr('type');//uncaught exception: type property can't be changed
+        }
+        </script>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>属性操作</h2>
+        <input type="text" class="apple" id="username" name="username" value="tom" address="beijing"  />
+        <input type="button" value="删除" onclick="f1()" />
+    </body>
+</html>

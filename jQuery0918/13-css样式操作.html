@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        function f1(){
+            //获取   $().css(样式名称)
+            //jquery获取样式信息有 行内、内部、外部
+            //DOM只能获取 行内 样式
+            console.log($('div').css('width')); //300px
+            console.log($('div').css('height')); //200px
+            console.log($('div').css('background-color')); //rgb(255, 165, 0)
+            console.log($('div').css('color')); //rgb(0, 128, 0)
+            console.log($('div').css('font-size')); //25px
+
+            //当前jquery版本要求把复合样式拆分为"具体样式"进行操作
+            //border ---->border-(top/left/right/bottom)-(style/color/width)
+            //console.log($('div').css('border')); //(空字符串)
+            console.log($('div').css('border-top-color')); //rgb(128, 0, 128)
+            console.log($('div').css('border-top-width')); //5px
+            console.log($('div').css('border-top-style')); //solid
+        }
+        function f2(){
+            //设置，只能把样式设置为“行内”样式
+            //存在就修改、否则添加
+            //$().css(name样式名称,value值);
+            $('div').css('width','500px');
+            $('div').css('background-color','pink');
+            $('div').css('color','red');
+
+            //复合样式可以直接设置
+            $('div').css('border','10px solid green');
+        }
+        </script>
+        <style type="text/css">
+        div{color:green; }
+        #one{}
+        </style>
+        <link href="./13.css" style="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>css样式操作</h2>
+        <div id="one" style='width:300px; height:200px; background-color:orange'>this classname is php0710</div>
+        <input type="button" value="获取" onclick="f1()" />
+        <input type="button" value="设置" onclick="f2()" />
+    </body>
+</html>

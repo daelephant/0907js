@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        function f1(){
+            // 获取属性信息$().attr(属性名称);
+            // 自定义和w3c规定的 都可以获取
+            console.log($("input:first").attr('type'));//text
+            console.log($("input:first").attr('class'));//apple
+            console.log($("input:first").attr('id'));//username
+            console.log($("input:first").attr('name'));//username
+            console.log($("input:first").attr('value'));//tom
+            console.log($("input:first").attr('address'));//beijing
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>属性操作</h2>
+        <input type="text" class="apple" id="username" name="username" value="tom" address="beijing"  />
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

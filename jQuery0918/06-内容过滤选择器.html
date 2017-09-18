@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //① :contains(text) 节点内部包含text字符串信息
+            $('div:contains(beijing)').css('color','red');
+            //② :empty 获得空节点
+            console.log($('div:empty'));//Object[div]
+            //③ :has(选择器)  节点必须包含“选择器”对应的子节点
+            console.log($('div:has(p)')); //Object[div,div]
+            //④ :parent  作为父节点存在的节点
+            console.log($('div:parent'));//Object[div, div, div, div, div]
+        }
+        </script>
+    </head>
+    <body>
+        <h2 class="orange">jquery内容过滤选择器</h2>
+        <div>xiaoming like beijing</div>
+        <div>mary like newyork</div>
+        <div><p></p></div>
+        <div><p></p></div>
+        <div>     </div>
+        <div></div>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>
