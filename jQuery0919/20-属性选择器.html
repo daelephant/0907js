@@ -9,15 +9,15 @@
         <script type="text/javascript" src="./jquery-1.4.4.js"></script>
         <script type="text/javascript">
         function f1(){
-            //① $([name])
+            //① $([name])。节点内部必须有”name名称”属性存在
             $("[id]").css('color','red');
-            //② $([name=value])
+            //② $([name=value])。name属性值等于value
             $('[id=usertel]').css('width','400px');
-            //③ $([name^=value])
+            //③ $([name^=value])。name属性值以value开始
             $('[id^=us]').css('background-color','pink');
-            //④ $([name$=value])
+            //④ $([name$=value])。 name属性值以value结尾
             $('[value$=52]').css('font-size','30px');
-            //⑤ $([name*=value])
+            //⑤ $([name*=value])。name属性值必须包括value字样(位置不要求)
             $('[class*=an]').css('border','2px solid green');
 
             //⑥ $([name!=value])

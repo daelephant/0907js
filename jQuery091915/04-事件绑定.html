@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //③ 批量绑定多个事件
+        $(function(){
+            //$('div').bind(json对象);
+            //$('div').bind({名称:值,名称:值,....});
+            $('div').bind({
+                mouseover:function(){
+                    $(this).css('background-color','orange')
+                },
+                mouseout:function(){
+                    $(this).css('background-color','')
+                },
+                click:function(){
+                    $(this).css('font-size','30px');
+                }
+            });
+        });
+        </script>
+        <style type="text/css">
+        div{width:300px; height:200px; background-color:pink;}
+        </style>
+    </head>
+    <body>
+        <h2>事件绑定(json对象批量绑定事件)</h2>
+        <div>this is autumn</div>
+    </body>
+</html>

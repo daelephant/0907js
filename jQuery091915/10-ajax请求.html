@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //$.get()和$.post()是对ajax封装的具体操作方法，层次最高，可选参数少
+            //$.get(url,[data,function,dataType]);
+
+            //$.get('./10.php');
+            //$.get('./10.php',function(msg){//获得服务器端返回的信息
+            //    alert(msg);
+            //});
+            //$.get('./10.php',{name:'tom',age:21},function(msg){//给服务器端传递数据
+            //    alert(msg);
+            //});
+            //$.get('./10.php',function(msg){
+            //    alert(msg);//object Object
+            //},'json');
+
+            //$.ajax() 对ajax的封装层次处于中间，可选参数相对较多
+            $.ajax({
+                url:'./10.php',
+                data:"goods_num=102&goods_name=apple",
+                type:'post',
+                dataType:'json',
+                success:function(msg){
+                    alert(msg);//object Object
+                }
+            });
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>ajax请求</h2>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

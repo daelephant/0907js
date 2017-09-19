@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <style type="text/css">
+        select{width:130px; height:220px;}
+        </style>
+    </head>
+    <body>
+        <select id="hebei" multiple="multiple">
+            <option>石家庄</option>
+            <option>保定</option>
+            <option>邯郸</option>
+            <option>邢台</option>
+            <option>衡水</option>
+        </select>
+        <select id="henan" multiple="multiple">
+            <option>郑州</option>
+            <option>开封</option>
+            <option>洛阳</option>
+            <option>周口</option>
+            <option>信阳</option>
+        </select><br /><br />
+        <input type="button" value="-->" onclick="toRight()">
+        <input type="button" value="==>" onclick="toAllRight()">
+        <input type="button" value="<--" onclick="toLeft()">
+        <input type="button" value="<==" onclick="toAllLeft()">
+        <script type="text/javascript">
+        //页面加载完毕，给每个option设置双击事件
+        $(function(){
+            $('option').dblclick(function(){
+                //this分别依次代表每个option的dom对象
+                //判断当前option的父节点类型,(hebei的节点移到henan，反之亦然)再做移动操作
+                if(this.parentNode.id=='hebei'){
+                    $(this).appendTo($('#henan'));
+                }else{
+                    $(this).appendTo($('#hebei'));
+                }
+            });
+        });
+
+        function toRight(){
+            //左侧"选中"的项目移动到右侧
+            $("#hebei option:selected").appendTo($('#henan'));
+        }
+        function toLeft(){
+            //右侧"选中"的项目移动到左侧
+            $("#henan option:selected").appendTo($('#hebei'));
+        }
+        function toAllRight(){
+            //左侧全部项目移动到右侧
+            $("#hebei option").appendTo($('#henan'));
+        }
+        function toAllLeft(){
+            //右侧全部的项目移动到左侧
+            $("#henan option").appendTo($('#hebei'));
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="../jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+
+        var xmldom = null; //声明一个全局变量，用于存储第一次请求回来的xml信息
+
+
+        //获取并显示省份
+        function showprovince(){
+            //① ajax去服务器端获得xml文件里边的省份信息
+            $.ajax({
+                url:'./ChinaArea.xml',
+                //data:,
+                dataType:'xml',  //调用responseXML
+                type:'get',
+                success:function(msg){
+                    xmldom = msg; //把请求回来的xml信息赋予给xmldom一份
+
+                    //alert(msg);//object XMLDocument
+                    var pros = $(msg).find('province');//在msg里边获得province元素节点对象
+                    //遍历省份信息出来 pros是jquery对象
+                    pros.each(function(k,v){
+                        //k 是dom对象下标，  v (this)是dom对象
+                        var nm = $(this).attr('province'); //省份名称
+                        var id = $(this).attr('provinceID'); //省份id
+                        $('#province').append("<option value='"+id+"'>"+nm+"</option>");
+                    });
+                }
+            });
+            //② jquery解析xml并显示
+        }
+        $(function(){
+            //页面加载完毕就显示省份
+            showprovince();
+        });
+
+        function showcity(){
+            //根据选中的省份显示对应的城市
+            //① 获得被选中的省份的value属性值
+            var pid = $('#province option:selected').val();
+            //② 在xml文档中获得province节点(xml的province节点)，其属性provinceID="pid"
+            //   (xml文档内容"不发生变化"，其不适合做频繁的请求，带宽、服务器资源、用户等待时间有损耗)
+            var xml_province = $(xmldom).find('province[provinceID='+pid+']');
+            
+            //③ 在xml_province（jquery对象）里边获得子节点City
+            var citys = xml_province.find('City');
+            //④ 遍历citys，并在页面上显示
+            $('#city').empty(); //先清除已经显示的节点
+            $('#city').append('<option value="0">-请选择-</option>');
+            citys.each(function(){
+                var nm = $(this).attr('City');
+                var id = $(this).attr('CityID');
+                $('#city').append("<option value='"+id+"'>"+nm+"</option>");
+            });
+        }
+        </script>
+    </head>
+    <body>
+        <h2>地区三级联动</h2>
+        省份：<select id="province" onchange="showcity()"></select>
+        城市：<select id="city"><option value='0'>-请选择-</option></select>
+        地区：<select id="diqu"><option value='0'>-请选择-</option></select>
+    </body>
+</html>

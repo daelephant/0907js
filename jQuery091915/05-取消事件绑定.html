@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //取消事件绑定
+        $(function(){
+            $('div').bind({
+                mouseover:function(){
+                    $(this).css('background-color','orange')
+                },
+                mouseout:function(){
+                    $(this).css('background-color','lightblue')
+                },
+                click:function(){
+                    $(this).css('font-size','30px');
+                }
+            });
+
+            $('div').bind('mouseover',f1);  //事件绑定处理函数为：有名函数
+            $('div').bind('mouseover',f2);  //事件绑定处理函数为：有名函数
+            $('div').bind('mouseover',f3);  //事件绑定处理函数为：有名函数
+        });
+        function f1(){console.log(111);}
+        function f2(){console.log(222);}
+        function f3(){console.log(333);}
+
+        function cancel(){
+            //取消事件绑定
+            //$('div').unbind();  //取消全部事件(事件处理函数部分[有名/匿名]的)
+            //$('div').unbind('mouseover');//把mouseover事件给取消(事件处理函数部分[有名/匿名]的)
+
+            //取消一个事件的具体处理函数，该函数必须为“有名”函数
+            //取消mouseover的f2处理函数(处理函数必须是[有名]的)
+            $('div').unbind('mouseover',f2);
+        }
+        </script>
+        <style type="text/css">
+        div{width:300px; height:200px; background-color:pink;}
+        </style>
+    </head>
+    <body>
+        <h2>取消事件绑定</h2>
+        <div>this is autumn</div>
+        <input type="button" value="取消事件" onclick="cancel()" />
+    </body>
+</html>

@@ -11,7 +11,7 @@
         //页面加载完毕就给shu国的每个li设置mouseover和mouseout事件
         $().ready(function(){
             //jquery的全部方法本身有"遍历机制"
-            $('#shu li').mouseover(function(){
+            $('#shu li').mouseover(function(){//派生选择器
                 //this分别依次代表每个li的dom对象
                 $(this).css('background-color','pink');
             });

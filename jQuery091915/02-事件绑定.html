@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //①简单事件绑定
+        //页面加载完毕 给div设置事件
+        $(function(){
+            //$('div').bind(事件类型，处理函数);
+            $('div').bind('mouseover', function(){
+                //this代表div的dom对象
+                $(this).css('background-color','orange');
+            });
+        });
+        </script>
+        <style type="text/css">
+        div{width:300px; height:200px; background-color:pink;}
+        </style>
+    </head>
+    <body>
+        <h2>事件绑定(简单使用)</h2>
+        <div>this is autumn</div>
+    </body>
+</html>

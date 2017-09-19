@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        function f1(){
+            //隐藏 slideUp([速度(默认速度)，回调函数])
+            $('div').slideUp(3000); //height->display:none
+        }
+        function f2(){
+            //显示  slideDown([速度(默认速度)，回调函数])
+            $('div').slideDown(3000);//display:black->height
+        }
+        function f3(){
+            //开关效果  slideToggle([速度(默认速度)，回调函数])
+            $('div').slideToggle(2000);
+        }
+
+//        $(function(){
+//            //页面加载完毕，间隔调用f3执行(有汽车气缸效果)
+//            setInterval("f3()",2000);
+//        });
+        </script>
+
+        <style type="text/css">
+        div{width:300px; height:200px; background-color:green;}
+        </style>
+    </head>
+    <body>
+        <h2>垂直动画效果</h2>
+        <div>this is autumn</div>
+        <input type="button" value="隐藏" onclick="f1()" />
+        <input type="button" value="显示" onclick="f2()" />
+        <input type="button" value="开关" onclick="f3()" />
+    </body>
+</html>

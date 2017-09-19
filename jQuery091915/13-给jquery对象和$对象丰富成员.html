@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //① 给jquery对象丰富成员
+
+        //② 给$对象丰富成员
+        $.hello = "world";    //给对象丰富单一成员
+        console.log($.hello);
+
+        //通过json对象进行成员丰富
+        $.extend({shoudu:function(){console.log('it is beijing')}});
+        $.shoudu();
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2></h2>
+    </body>
+</html>
