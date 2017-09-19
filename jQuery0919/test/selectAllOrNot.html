@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选或者全不选</title>
+    <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+    <script type="text/javascript">
+        function selAll(){
+            //全选$('li').css('color','red');
+            //jQuery本身内部大部分方法自身有“遍历”机制，可以为每个元素节点对象进行相关的功能和操作
+            $('.hby').attr("checked",true);
+        }
+        function selNotAll(){
+            //全不选
+            $('.hby').attr("checked",false);
+        }
+        function selFan(){
+            //反选
+            //遍历全部的复选框，查看每个项目的选中状态，并做处理(选中就取消，否则就设置选中);
+            for(var i=0; i<$('.hby').length;i++){
+                var flag = $('.hby:eq('+i+')').attr('checked');//设置属性一定要有引号
+                $('.hby:eq('+i+')').attr('checked',!flag);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>选中测试demo</h2>
+love:
+<input type="checkbox" class="hby" name="hobby[]" value="1"/>篮球
+<input type="checkbox" class="hby" name="hobby[]" value="2"/>乒乓
+<input type="checkbox" class="hby" name="hobby[]" value="3"/>网球
+<input type="checkbox" class="hby" name="hobby[]" value="4"/>足球
+<br /><br/>
+<input type="button" value="select all" onclick="selAll()"/>
+<input type="button" value="select not all" onclick="selNotAll()"/>
+<input type="button" value="select un" onclick="selFan()"/>
+</body>
+</html>

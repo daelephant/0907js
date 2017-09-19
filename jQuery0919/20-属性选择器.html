@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        function f1(){
+            //① $([name])
+            $("[id]").css('color','red');
+            //② $([name=value])
+            $('[id=usertel]').css('width','400px');
+            //③ $([name^=value])
+            $('[id^=us]').css('background-color','pink');
+            //④ $([name$=value])
+            $('[value$=52]').css('font-size','30px');
+            //⑤ $([name*=value])
+            $('[class*=an]').css('border','2px solid green');
+
+            //⑥ $([name!=value])
+            //获得的节点：
+            //① 没有name属性的
+            //② 有name属性的并且属性值不等于value
+            //$('[class!=apple]').css('background-color','gray');
+
+            //节点必须有name属性，并且属性值不等于value
+            //⑦ $([name][name!=value])
+            //$('[class][class!=apple]').css('color','blue');
+
+            //$('input[class][class*=p]').css('background-color','lightgreen');
+        }
+        </script>
+    </head>
+    <style type="text/css">
+    </style>
+    <body>
+        <h2>属性选择器</h2>
+        <input type="text" class="banana" value="jim"/><br />
+        <input type="text" id="one" value="jim@163.com" class="apple"/><br />
+        <input type="text" id="usertel" value="13452674352"/><br />
+        <input type="text" id="userqq" value="23877823" class="orange"/><br />
+        <input type="text" id="useraddr" value="xisanqi652" class="fireguo"/><br />
+        <input type="button" value="触发" onclick="f1()" class="apple"/>
+        <p class="grape">this is fruit</p>
+    </body>
+</html>

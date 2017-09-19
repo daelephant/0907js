@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        window.onload = function(){
+            console.log(111);
+        }
+        window.onload = function(){
+            console.log(222);
+        }
+        window.onload = function(){
+            console.log(333);
+        }
+        //在同一个请求里边多个传统加载事件，后者会覆盖前者
+        //最后只给体现"333"的结果
+        </script>
+    </head>
+    <body>
+        <h2>加载事件(jquery与传统的区别)</h2>
+    </body>
+</html>

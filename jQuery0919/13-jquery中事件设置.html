@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        //页面加载完毕就给h2设置事件
+        $(document).ready(function(){
+            $('form').submit(function(){
+                alert('表单要进行提交！');
+            });
+        });
+        function f1(){
+            console.log('1234');
+            //使得form表单进行提交（间接使得form表单提交）
+            $('form').submit();  //触发执行，不写参数是触发执行
+        }
+        </script>
+    </head>
+    <style type="text/css">
+    </style>
+    <body>
+        <h2>jquery事件设置</h2>
+        <form method="post" action="./13.php">
+            用户名：<input type="text" name="username">
+            <input type="submit" value="注册" />
+        </form>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

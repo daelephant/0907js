@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        //页面加载完毕就给h2设置事件
+        $(document).ready(function(){
+            $('h2').mouseover( function(){
+                //设置事件执行过程
+                //this代表h2元素的dom对象
+                $('h2').css('background-color','lightblue');
+                $(this).css('color','blue');
+            } );
+            $('h2').mouseout(function(){
+                $(this).css('background-color','lightgreen');
+            });
+            //为h2绑定多个mouseover事件
+            $('h2').mouseover(function(){
+                console.log(1111);
+            });
+        });
+        </script>
+    </head>
+    <style type="text/css">
+    h2{width:300px; height:200px; background-color:pink}
+    </style>
+    <body>
+        <h2>jquery事件设置</h2>
+    </body>
+</html>

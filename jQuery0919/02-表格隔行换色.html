@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        window.onload = function(){
+            //首行样式
+            $('tr:first').css('background-color','yellow');
+            //其他行隔行换色
+            $('tr:gt(0):odd').css('background-color','lightblue');
+        }
+        function kongzhi(){
+            var flag = $('.ctl').attr('checked');//控制器复选框选中情况
+            $('.gd').attr('checked',flag);//其他复选框选中情况设置
+        }
+        </script>
+        <style type="text/css">
+        table{width:700px; margin:auto; border:1px solid black; border-collapse:collapse;}
+        td {border:1px solid black}
+        h2{width:700px; margin:auto; text-align:center;}
+        </style>
+    </head>
+    <body>
+        <h2>表格隔行换色</h2>
+        <table>
+        <tr>
+            <td><input type="checkbox" class="ctl" onclick="kongzhi()"/></td>
+            <td>序号</td><td>名称</td><td>价格</td><td>数量</td></tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>1</td><td>iphone</td><td>6500</td><td>15</td></tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>2</td><td>htc</td><td>3200</td><td>6</td></tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>3</td><td>samsung</td><td>4600</td><td>23</td></tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>4</td><td>huawei</td><td>1900</td><td>31</td></tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>5</td><td>nokia</td><td>1300</td><td>10</td></tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //① 遍历数组
+        //$.each(数组,function(k下标变量, v值变量){});
+        var color = ['gold','yellow','orange','gray'];
+        jQuery.each(color,function(k,v){
+            console.log(k+"---"+v);
+        });
+
+        //② 遍历对象
+        //$.each(对象,function(k成员名称, v成员值){});
+        var cat = {name:'kitty',age:5,climb:function(){console.log('在爬树')}};
+        $.each(cat,function(m,n){
+            console.log(m+"==="+n);
+        });
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>each遍历方法</h2>
+        <input type="button" value="触发1" onclick="f1()" />
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+
+        <script type="text/javascript">
+        //传统加载事件执行时机：全部内容都显示好了，再给执行
+        window.onload = function(){
+            alert(1234); //4s后看到图片，接着有弹出框效果
+                         //我们眼睛角度的效果：4s后图片、弹出框一起看到
+        }
+        </script>
+    </head>
+    <body>
+        <h2>jquery加载事件执行时机</h2>
+        <!--图片4s后显示-->
+        <img src="./09.php" alt="" />
+    </body>
+</html>

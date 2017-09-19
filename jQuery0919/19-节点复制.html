@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        //页面加载完毕就给shu国的每个li设置mouseover和mouseout事件
+        $().ready(function(){
+            //jquery的全部方法本身有"遍历机制"
+            $('#shu li').mouseover(function(){
+                //this分别依次代表每个li的dom对象
+                $(this).css('background-color','pink');
+            });
+            $('#shu li').mouseout(function(){
+                //this分别依次代表每个li的dom对象
+                $(this).css('background-color','');
+            });
+        });
+
+        function f1(){
+            //复制一个“关羽”并追加给wu国
+            var fu_guan = $('#guan').clone(true);//"节点+事件" 都给复制
+            //var fu_guan = $('#guan').clone(false);//只给复制 "节点"
+            $('#wu').append(fu_guan);
+        }
+        </script>
+    </head>
+    <style type="text/css">
+    </style>
+    <body>
+        <h2>节点复制</h2>
+        <ul id="shu">
+            <li>刘备</li>
+            <li id="guan">关羽</li>
+            <li>张飞</li>
+        </ul>
+        <ul id="wu">
+            <li id="quan">孙权</li>
+            <li id="yu">周瑜</li>
+            <li>小乔</li>
+        </ul>
+        <input type="button" value="复制" onclick="f1()" />
+    </body>
+</html>

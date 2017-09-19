@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.4.4.js"></script>
+    <script type="text/javascript">
+        window.onload =function(){
+            //首行样式
+            $('tr:first').css('background-color','yellow');
+            //其他行隔行显示
+            $('tr:gt(0):odd').css('background-color','lightblue');
+        }
+        function kongzhi(){
+            var flag = $('.ctl').attr('checked');//控制器复选框选中则为true否则为false
+            $('.gd').attr('checked',flag);//其他复选框选中情况设置
+        }
+        function kongzhi1(){
+            var flag = $('.gd').attr('checked');
+            $('.ctl').attr('checked',flag);
+        }
+    </script>
+    <style type="text/css">
+        table{width: 700px; margin: auto;border: 1px solid black;border-collapse: collapse;}
+        td{border: 1px solid black}
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="checkbox" class="ctl" onclick="kongzhi()"/></td>
+            <td>id</td><td>name</td><td>price</td><td>number</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>1</td><td>iphone</td><td>8000</td><td>12</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>2</td><td>iphone</td><td>8000</td><td>12</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="gd"  /></td>
+            <td>3</td><td>iphone</td><td>8000</td><td>12</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="gd" /></td>
+            <td>4</td><td>iphone</td><td>8000</td><td>12</td>
+        </tr>
+    </table>
+</body>
+</html>

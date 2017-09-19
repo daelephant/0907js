@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        function f1(){
+            ////主动
+            //after()   后置
+            $('#guan').after("<li>马超</li>");
+            //before()  前置
+            $('#guan').before("<li>赵云</li>");
+
+            ////被动
+            //insertAfter()  后置
+            $('<li>魏延</li>').insertAfter($('#guan'));
+            //insertBefore() 前置
+            $('<li>黄忠</li>').insertBefore($('#guan'));
+
+            ///已有节点追加(发生节点物理位置移动现象)
+            $('#quan').insertAfter($('#guan')); //被动
+            $('#guan').after($('#yu'));//主动
+        }
+        </script>
+    </head>
+    <style type="text/css">
+    </style>
+    <body>
+        <h2>节点追加(兄弟)</h2>
+        <ul id="shu">
+            <li>刘备</li>
+            <li id="guan">关羽</li>
+            <li>张飞</li>
+        </ul>
+        <ul id="wu">
+            <li id="quan">孙权</li>
+            <li id="yu">周瑜</li>
+            <li>小乔</li>
+        </ul>
+        <input type="button" value="触发" onclick="f1()" />
+    </body>
+</html>

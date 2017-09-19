@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+        <script type="text/javascript">
+        //① $(document).ready(fn);
+        $(document).ready(function(){
+            $('h2').css('color','red');
+        });
+        //② $().ready(fn);
+        $().ready(function(){
+            $('h2').css('background-color','lightblue');
+        });
+        //③ $(function);
+        //   把一个function函数当做一个选择器使用
+        $(function(){
+            $('h2').css('width','500px');
+        });
+        </script>
+    </head>
+    <body>
+        <h2>jquery对加载事件的封装</h2>
+    </body>
+</html>
