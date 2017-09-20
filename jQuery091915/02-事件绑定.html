@@ -10,6 +10,11 @@
         <script type="text/javascript">
         //①简单事件绑定
         //页面加载完毕 给div设置事件
+        //jQuery加载事件的三种形式，常用第三种原生：window.onload()
+//      1、  $(document).ready(function(){});
+//      2、  $().ready(function(){});
+//      3、  $(function(){});
+
         $(function(){
             //$('div').bind(事件类型，处理函数);
             $('div').bind('mouseover', function(){

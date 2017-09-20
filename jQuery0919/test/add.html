@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./jquery-1.4.4.js"></script>
+    <script type="text/javascript">
+        //计数器
+        var num = 0;
+        function addpic(){
+            num++;
+            var pic = '<p id="mypic'+num+'">相册：<input type="file" name="userpic" /><input type="button" value="dele" onclick="removep(\'mypic'+num+'\')"> </p> ';
+            $('#one').after(pic);
+        }
+        function removep(flag){
+            $('#'+flag).remove();
+        }
+
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+        <p>username:<input type="text" name="username" /></p>
+        <p>password:<input type="text" name="userpwd" /></p>
+        <p id="one">相册：<input type="file" name="userpic" /><input type="button" value="add" onclick="addpic()" /></p>
+        <input type="submit" value="sign up"/>
+    </form>
+</body>
+</html>
