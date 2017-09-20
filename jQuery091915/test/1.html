@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉列表的项目移动</title>
+    <style type="text/css">
+        select{width: 130px;height: 220px;}
+    </style>
+    <script type="text/javascript" src="../jquery-1.4.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+          $('option').dblclick(function(){
+              //this分别一次代表每个option的dom对象
+              //判断当前option的父节点类型，
+              if (this.parentNode.id=='hebei'){
+                  $(this).appendTo($('#henan'));
+              }else {
+                  $(this).appendTo('#hebei');
+              }
+          });
+        });
+        function toRight(){
+            $("#hebei option:selected").appendTo($('#henan'));
+        }
+        function toLeft(){
+            $("#henan option:selected").appendTo($('#hebei'));
+        }
+        function toAllRight(){
+            $("#hebei option").appendTo('#henan');
+        }
+        function toAllLeft(){
+            $("#henan option").appendTo('#hebei');
+        }
+    </script>
+</head>
+<body>
+<select id="hebei" multiple="multiple">
+    <option>石家庄</option>
+    <option>保定</option>
+    <option>邯郸</option>
+    <option>邢台</option>
+    <option>衡水</option>
+</select>
+<select id="henan" multiple="multiple">
+    <option>郑州</option>
+    <option>开封</option>
+    <option>洛阳</option>
+    <option>周口</option>
+    <option>信阳</option>
+</select><br /><br />
+<input type="button" value="-->" onclick="toRight()">
+<input type="button" value="==>" onclick="toAllRight()">
+<input type="button" value="<--" onclick="toLeft()">
+<input type="button" value="<==" onclick="toAllLeft()">
+</body>
+</html>

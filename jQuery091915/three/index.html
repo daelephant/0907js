@@ -60,12 +60,29 @@
                 $('#city').append("<option value='"+id+"'>"+nm+"</option>");
             });
         }
+        function showdiqu(){
+            //获取被选中的城市信息value
+            var pid = $('#city option:selected').val();
+            //在xml中获取city节点，其属性CityID = “pid”
+            var xml_city = $(xmldom).find('City[CityID='+pid+']');
+            //在xml_city中获取子节点
+            var diqus = xml_city.find('Piecearea');
+            //遍历diqus,并显示
+            $('#diqu').empty();
+            $('#diqu').append('<option value="0">-select-</option>');
+            diqus.each(function(){
+                var nm = $(this).attr('Piecearea');
+                var id = $(this).attr('PieceareaID');
+                $('#diqu').append("<option value='"+id+"'>"+nm+"</option>");
+            });
+
+        }
         </script>
     </head>
     <body>
         <h2>地区三级联动</h2>
         省份：<select id="province" onchange="showcity()"></select>
-        城市：<select id="city"><option value='0'>-请选择-</option></select>
+        城市：<select id="city" onchange="showdiqu()"><option value='0'>-请选择-</option></select>
         地区：<select id="diqu"><option value='0'>-请选择-</option></select>
     </body>
 </html>
